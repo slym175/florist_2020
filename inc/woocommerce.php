@@ -97,7 +97,7 @@ function get_product_active($product_variations, $default_attributes,$attributes
     return $return;
 }
 
-class WoocommerceNewsun{
+class Woocommerceflorist{
     /**
      * Hàm check giá mặc định của sản phẩm có nhiều biến thể
      */

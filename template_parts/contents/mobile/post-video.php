@@ -43,18 +43,18 @@ $post_video = new WP_Query(array(
                     <?php endwhile; ?>
                 </div>
                 <button class="v-nav v-next">
-                    <img src="/wp-content/themes/newsun/assets/assets/mobile/next.svg" alt="next">
+                    <img src="/wp-content/themes/florist/assets/assets/mobile/next.svg" alt="next">
                 </button>
                 <button class="v-nav v-prev">
-                    <img src="/wp-content/themes/newsun/assets/assets/mobile/prev.svg" alt="prev">
+                    <img src="/wp-content/themes/florist/assets/assets/mobile/prev.svg" alt="prev">
                 </button>
             </div>
         </div>
         <div id="v-dots-container"></div>
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
-                <a href="#" title="" class="yt-newsun">
-                    Xem thêm video tại kênh Youtube NEWSUN
+                <a href="#" title="" class="yt-florist">
+                    Xem thêm video tại kênh Youtube florist
                 </a>
             </div>
         </div>

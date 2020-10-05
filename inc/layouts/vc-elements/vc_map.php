@@ -6,7 +6,7 @@ function loadVCMapNewLayout(){
         'name' => esc_html__('Content Header',TEXTDOMAIN),
         'base' => 'nt_content_header',
         'icon' => 'icon-st',
-        'category' => 'Newsun',
+        'category' => 'florist',
         'params' => array(
             [
                 "type" => "dropdown",
@@ -71,7 +71,7 @@ function loadVCMapNewLayout(){
         'name' => esc_html__('Sale Product Hot',TEXTDOMAIN),
         'base' => 'st_product_sale',
         'icon' => 'icon-st',
-        'category' => 'Newsun',
+        'category' => 'florist',
         'params' => array(
             [
                 'type' => 'textfield',
@@ -92,7 +92,7 @@ function loadVCMapNewLayout(){
         'name' => esc_html__('Product in category',TEXTDOMAIN),
         'base' => 'st_product_in_category',
         'icon' => 'icon-st',
-        'category' => 'Newsun',
+        'category' => 'florist',
         'params' => array(
             [
                 'type' => 'textfield',
@@ -120,7 +120,7 @@ function loadVCMapNewLayout(){
         'name' => esc_html__('Product viewed',TEXTDOMAIN),
         'base' => 'st_product_viewed',
         'icon' => 'icon-st',
-        'category' => 'Newsun',
+        'category' => 'florist',
         'params' => array(
             [
                 'type' => 'textfield',
@@ -135,7 +135,7 @@ function loadVCMapNewLayout(){
         'name' => esc_html__('News and Video',TEXTDOMAIN),
         'base' => 'st_news_and_video',
         'icon' => 'icon-st',
-        'category' => __('Newsun', TEXTDOMAIN),
+        'category' => __('florist', TEXTDOMAIN),
         'params' => array(
             [
                 'type' => 'textfield',
@@ -183,7 +183,7 @@ function loadVCMapNewLayout(){
         'name' => esc_html__('Hình ảnh',TEXTDOMAIN),
         'base' => 'st_single_image',
         'icon' => 'icon-st',
-        'category' => __('Newsun', TEXTDOMAIN),
+        'category' => __('florist', TEXTDOMAIN),
         'params' => array(
             [
                 "type" => "attach_image",

@@ -25,11 +25,11 @@ $locations = new WP_Query($args);
             <div class="container">
                 <div class="row pt-5 pb-2">
                     <div class="col-md-12 mb-4">
-                        <h2 class="text-center text-white">HỆ THỐNG SIÊU THỊ ĐIỆN MÁY NEWSUN</h2>
+                        <h2 class="text-center text-white">HỆ THỐNG SIÊU THỊ ĐIỆN MÁY florist</h2>
                     </div>
                     <div class="col-md-8 px-0">
                         <div id="list_store_container">
-                            <h5 class="sec-title">Tìm siêu thị điện máy NEWSUN</h5>
+                            <h5 class="sec-title">Tìm siêu thị điện máy florist</h5>
                             <div class="row">
                                 <div class="col-md-3 pr-0" style="margin-bottom: 15px">
                                     <select name="" id="country_select" class="form-control">

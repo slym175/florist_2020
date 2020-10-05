@@ -27,7 +27,7 @@ get_header('aboutus');
                         </div>
                         <div class="col-md-12 text-lg-left mt-2">
                             <h3 class="text-lg-left text-center"><?= the_title() ?></h3>
-                            <div class="maps-newsun w-100">
+                            <div class="maps-florist w-100">
                                 <?= get_post_meta(get_the_ID(),'map',true) ?>
                             </div>
                             <?php while (have_posts()) : the_post(); ?>

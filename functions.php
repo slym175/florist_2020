@@ -13,7 +13,7 @@ define('PAGE_SHOPADDRESS_ID', 198);
 
 define('THEME_URL', get_template_directory());
 define('THEME_URL_URI', get_template_directory_uri());
-define('TEXTDOMAIN', 'newsun');
+define('TEXTDOMAIN', 'florist');
 define('PATH_URL_WIDGET', THEME_URL . '/widget/');
 
 require_once THEME_URL . '/inc/cla_nanoweb.php';
@@ -24,13 +24,13 @@ require_once THEME_URL . '/inc/helper/cla_woocommerce.php';
 require_once THEME_URL . '/inc/helper/ajax.php';
 require_once THEME_URL . '/inc/layouts/comments.php';
 require_once THEME_URL . '/inc/woocommerce.php';
-require_once THEME_URL . '/inc/newsun.php';
-if (!function_exists('newsun_setup')) {
-    function newsun_setup()
+require_once THEME_URL . '/inc/florist.php';
+if (!function_exists('florist_setup')) {
+    function florist_setup()
     {
         /* Thiết lập textdomain */
         $language_folder = THEME_URL . '/languages';
-        load_theme_textdomain('newsun', $language_folder);
+        load_theme_textdomain('florist', $language_folder);
 
         /* Tạo menu */
         register_nav_menus(
@@ -82,7 +82,7 @@ if (!function_exists('newsun_setup')) {
 
         /* Tạo sidebar */
         $side_bar = array(
-            'name' => __('Main Sidebar', 'newsun'),
+            'name' => __('Main Sidebar', 'florist'),
             'id' => 'main-sidebar',
             'description' => __('Description Sidebar', TEXTDOMAIN),
             'class' => 'main-sidebar',
@@ -126,7 +126,7 @@ if (!function_exists('newsun_setup')) {
         register_sidebar($side_filter_product);
     }
 
-    add_action('after_setup_theme', 'newsun_setup');
+    add_action('after_setup_theme', 'florist_setup');
 
     function carrental_customize_register($wp_customize)
     {
@@ -141,24 +141,24 @@ if (!function_exists('newsun_setup')) {
 
     add_action('customize_register', 'carrental_customize_register');
 
-    function carrental_customize_register_mobile($wp_customize_mobile)
-    {
-        $wp_customize_mobile->add_setting('logo_mobile'); // Thêm cài đặt cho trình tải lên logo
+    // function carrental_customize_register_mobile($wp_customize_mobile)
+    // {
+    //     $wp_customize_mobile->add_setting('logo_mobile'); // Thêm cài đặt cho trình tải lên logo
 
-        $wp_customize_mobile->add_control(new WP_Customize_Image_Control($wp_customize_mobile, 'logo_mobile', array(
-            'label' => __('Upload Logo Mobile(replaces text)', TEXTDOMAIN),
-            'section' => 'title_tagline',
-            'settings' => 'logo_mobile',
-        )));
-    }
+    //     $wp_customize_mobile->add_control(new WP_Customize_Image_Control($wp_customize_mobile, 'logo_mobile', array(
+    //         'label' => __('Upload Logo Mobile(replaces text)', TEXTDOMAIN),
+    //         'section' => 'title_tagline',
+    //         'settings' => 'logo_mobile',
+    //     )));
+    // }
 
-    add_action('customize_register', 'carrental_customize_register_mobile');
+    // add_action('customize_register', 'carrental_customize_register_mobile');
 }
 
 add_action('use_block_editor_for_post', '__return_false');
 //code phân trang cho woocommerce
-add_action('woocommerce_after_shop_loop', 'newsun_woocommerce_pagination', 10);
-function newsun_woocommerce_pagination()
+add_action('woocommerce_after_shop_loop', 'florist_woocommerce_pagination', 10);
+function florist_woocommerce_pagination()
 {
     woocommerce_pagination();
 }
@@ -166,31 +166,27 @@ function newsun_woocommerce_pagination()
 //Thêm file js,css
 function loadstyle()
 {
-    wp_enqueue_style('custom', get_template_directory_uri() . '/assets/css/custom.css');
-    wp_enqueue_style('comments', get_template_directory_uri() . '/assets/css/comments.css');
-    wp_enqueue_style('carousel', get_template_directory_uri() . '/assets/OwlCarousel/dist/assets/owl.carousel.min.css');
-    wp_enqueue_style('default', get_template_directory_uri() . '/assets/OwlCarousel/dist/assets/owl.theme.default.min.css');
+        wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/style.css');
+        wp_enqueue_style('bootstrap', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css');
+        wp_enqueue_style('slick', get_template_directory_uri() . '/assets/slick/slick.css');
+        wp_enqueue_style('slick-theme', get_template_directory_uri() . '/assets/slick/slick-theme.css');
+        wp_enqueue_style('t-fix', get_template_directory_uri() . '/assets/css/t.css');
 
 //    if (wp_is_mobile()) {
 //        wp_register_script('jQuery', get_template_directory_uri() . '/assets/js/jquery-3.5.1.js');
 //        wp_enqueue_script('jQuery');
 //    }
 
-
-    wp_register_script('popper', get_template_directory_uri() . '/assets/js/popper.min.js');
-    wp_enqueue_script('popper');
-
-    wp_register_script('bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js');
+    wp_register_script('jquery', get_template_directory_uri() . '/assets/js/jquery.min.js');
+    wp_enqueue_script('jquery');
+    wp_register_script('slick', get_template_directory_uri() . '/assets/slick/slick.min.js');
+    wp_enqueue_script('slick');
+    wp_register_script('bootstrap', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.min.js');
     wp_enqueue_script('bootstrap');
-
-    wp_register_script('trangchu', get_template_directory_uri() . '/assets/js/trangchu.js');
-    wp_enqueue_script('trangchu');
-
-    wp_register_script('carousel', get_template_directory_uri() . '/assets/OwlCarousel/dist/owl.carousel.min.js');
-    wp_enqueue_script('carousel');
-
-    wp_register_script('customjs', get_template_directory_uri() . '/assets/js/js.js');
-    wp_enqueue_script('customjs');
+    wp_register_script('custom-tr', get_template_directory_uri() . '/assets/js/custom-tr.js');
+    wp_enqueue_script('custom-tr');
+    wp_register_script('custom-add-tr', get_template_directory_uri() . '/assets/js/custom-add-tr.js');
+    wp_enqueue_script('custom-add-tr');
 }
 
 add_action('wp_enqueue_scripts', 'loadstyle');

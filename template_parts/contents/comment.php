@@ -28,7 +28,7 @@
                         <img class="img-fluid px-2 star star" src="assets/star.svg" alt="Star">
                         <img class="img-fluid px-2 star star" src="assets/star.svg" alt="Star">
                     </div>
-                    <p class="mb-0">Mới mua được mấy ngày thấy chất lượng rất tốt. Ủng hộ NewSun</p>
+                    <p class="mb-0">Mới mua được mấy ngày thấy chất lượng rất tốt. Ủng hộ florist</p>
                     <div class="content-box d-flex">
                         <p class="mb-0">10</p>
                         <i class="fas fa-thumbs-up align-bottom"></i>

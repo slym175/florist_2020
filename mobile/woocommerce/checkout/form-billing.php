@@ -18,7 +18,7 @@
  */
 
 defined('ABSPATH') || exit;
-$newsun_woocommerce = new NewsunWoocommerce();
+$florist_woocommerce = new floristWoocommerce();
 ?>
 <style>
     #billing_country_field {
@@ -39,12 +39,12 @@ $newsun_woocommerce = new NewsunWoocommerce();
                     $field['type'] = 'select';
                 }
                 $field['label'] = '';
-                $newsun_woocommerce->woocommerce_form_field($key, $field, $checkout->get_value($key));
+                $florist_woocommerce->woocommerce_form_field($key, $field, $checkout->get_value($key));
             }
             ?>
             <div class="form-check checkVAT">
                 <input type="checkbox" class="form-check-input" id="checkVAT">
-                <label class="form-check-label ml-2" for="checkVAT">Yêu cầu NEWSUN xuất hóa đơn VAT cho công ty hoặc tổ chức</label>
+                <label class="form-check-label ml-2" for="checkVAT">Yêu cầu florist xuất hóa đơn VAT cho công ty hoặc tổ chức</label>
                 <div class="check-vat-form mt-3">
                     <div class="form-group">
                         <input type="text" class="form-control" name="billing_ma_so_thue" id="inputTax" placeholder="Nhập mã số thuế nếu có">

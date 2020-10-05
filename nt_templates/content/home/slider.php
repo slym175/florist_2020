@@ -41,3 +41,24 @@ $banners = new WP_Query($args);
         <?php endwhile; ?>
     </div>
 </div>
+
+    <div class="slider-hompage">
+		<div class="slider-pc">
+			<div class="item">
+				<img src="assets/img/slide.png" title="">
+				<div class="content">
+					<h2>florist vietnam</h2>
+					<p>Chuyên về “Giống” & các sản phẩm cây trồng có giá trị kinh tế cao</p>
+					<a href="" title="" class="btn-cc">Tìm hiểu ngay</a>
+				</div>
+			</div>
+			<div class="item">
+				<img src="assets/img/slide.png" alt="">
+				<div class="content">
+					<h2>florist vietnam</h2>
+					<p>Chuyên về “Giống” & các sản phẩm cây trồng có giá trị kinh tế cao</p>
+					<a href="" title="" class="btn-cc">Tìm hiểu ngay</a>
+				</div>
+			</div>
+		</div>
+	</div>

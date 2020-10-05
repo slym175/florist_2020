@@ -5,7 +5,9 @@
  * Date: 6/17/2020
  * Time: 9:56 AM
  */
+
 get_header();
+
 if(have_posts()){
     while (have_posts()){
         the_post();
@@ -14,5 +16,4 @@ if(have_posts()){
 }
 ?>
 
-
-<?php get_footer() ?>
+<?php get_footer();

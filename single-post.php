@@ -99,7 +99,7 @@ else :
                 <div class="col-md-9 news">
                     <div class="col-md-12 p-0">
                         <ol class="breadcrumb breadcrumb-left p-0 m-0" style="margin-bottom: 1rem !important;">
-                            <?= newsun_breadcrumbs(); ?>
+                            <?= florist_breadcrumbs(); ?>
                         </ol>
                     </div>
                     <div class="col-12 p-0 pb-2">

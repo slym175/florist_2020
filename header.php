@@ -3,67 +3,220 @@ if (wp_is_mobile()) :
     get_header('mobile');
 else : ?>
     <!DOCTYPE html>
-    <html amp <?php language_attributes() ?>>
+    <html>
 
     <head>
+        <title> Trang chủ </title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<!--        <script async src="https://cdn.ampproject.org/v0.js"></script>-->
-        <link rel="canonica" href="http://localhost/newsun/" />
-        <meta name="viewport" content="width=device-width,minimum-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
         <meta name="description" content="">
         <meta name="keywords" content="">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://kit.fontawesome.com/30dda5888f.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="<?= THEME_URL_URI . '/assets/css/style.css' ?>">
         <?php wp_head() ?>
     </head>
 
-    <body <?php body_class() ?>>
-        <div class="container-fluid m-0 p-0">
-            <header class="header">
-                <div class="container-fluid app-navbar">
+    <body>
+        <header>
+            <div class="header-pc">
+                <div class="header-top">
                     <div class="container">
                         <div class="row">
-                            <nav class="navbar navbar-expand-lg navbar-light col-12 d-md-flex justify-content-between px-0">
-                                <a class="navbar-brand p-0" href="<?= home_url() ?>">
-                                    <img src="<?= get_theme_mod('logo') ?>" class="img-fluid" alt="logo">
-                                </a>
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="navbar-toggler-icon"></span>
-                                </button>
-
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <ul class="navbar-nav mr-auto">
-                                        <li class="nav-item active mt-2 mt-lg-0">
-                                            <?php
-                                            get_product_search_form();
-                                            ?>
+                            <div class="logo">
+                                <div class="img">
+                                    <a href="<?= home_url() ?>" title=""> <img src="<?= get_theme_mod( 'logo' ) ? get_theme_mod( 'logo' ) : THEME_URL_URI.'/assets/img/logo.png' ?>" alt="Logo"> </a>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="list-action">
+                                    <ul class="login">
+                                        <li><a href="" title=""> <span> <img src="<?= THEME_URL_URI . '/assets/img/dn.png' ?>" alt=""> </span> Đăng
+                                                nhập </a> </li>
+                                        <li><a href="" title="" class="gh"> <img src="<?= THEME_URL_URI . '/assets/img/gh.png' ?>" alt=""><span> 0
+                                                </span> </a> </li>
+                                        <li>
+                                            <div class="img">
+                                                <img src="<?= THEME_URL_URI . '/assets/img/vn.png' ?>" alt="">
+                                                <img src="<?= THEME_URL_URI . '/assets/img/vn.png' ?>" alt="" class="english">
+                                            </div>
+                                            <span class="select-item">
+                                                <select>
+                                                    <option> vi </option>
+                                                    <option> en </option>
+                                                </select>
+                                                <img src="./<?= THEME_URL_URI . '/assets/img/select.png' ?>" alt="">
+                                            </span>
                                         </li>
                                     </ul>
-                                    <?php
-                                    get_template_part('template_parts/menu/menu', 'primary');
-                                    ?>
                                 </div>
-                            </nav>
+                                <div class="search-form">
+                                    <div class="hotline">
+                                        <span> <img src="<?= THEME_URL_URI . '/assets/img/hotline.png' ?>" alt=""> </span>
+                                        <span>
+                                            <p>Hotline:</p>
+                                            <a href="" title=""><strong>0818 596 696</strong></a>
+                                        </span>
+                                    </div>
+                                    <div class="form-search">
+                                        <?php get_search_form(); ?>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="container">
-                    <div class="row py-1">
-                        <div class="border-right cate">
-                            <a href="#" class="header-bar-item border-left font-weight-bold text-dark-3"><i class="fas fa-bars ml-2 mr-md-2 mr-1"></i> Danh mục sản phẩm <i class="fa fa-caret-down ml-2" aria-hidden="true"></i></a>
-                            <!-- Danh mục sản phẩm -->
-                            <?php echo nt()->load_template('content/home/category', ''); ?>
+                <div class="header-menu">
+                    <div class="container">
+                        <div class="row">
+                            <ul class="menu-pc">
+                                <li class="active"> <a href="" title=""> trang chủ </a> </li>
+                                <li class=""> <a href="" title=""> SẢN PHẨM </a>
+                                    <ul class="menu-pc-con">
+                                        <li> <a href="" title="">QUÀ TẶNG</a> </li>
+                                        <li><a href="" title="">QUÀ TẶNG </a></li>
+                                        <li><a href="" title="">QUÀ TẶNG</a> </li>
+                                    </ul>
+                                </li>
+                                <li class=""> <a href="" title=""> HOT DEAL </a> </li>
+                                <li class=""> <a href="" title=""> QUÀ TẶNG </a> </li>
+                                <li class=""> <a href="" title=""> KINH NGHIỆM </a> </li>
+                                <li class=""> <a href="" title=""> ĐI & VIẾT </a> </li>
+                                <li class=""> <a href="" title=""> VỀ FLORIST VIETNAM </a>
+                                    <ul class="menu-pc-con">
+                                        <li> <a href="" title="">QUÀ TẶNG</a> </li>
+                                        <li><a href="" title="">QUÀ TẶNG </a></li>
+                                        <li><a href="" title="">QUÀ TẶNG</a> </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
-
-                        <?php
-                        get_template_part('template_parts/menu/menu', 'header');
-                        ?>
+                    </div>
+                </div>
+            </div>
+            <div class="header-mb">
+                <div class="logo-mb">
+                    <a href="" title=""> <img src="<?= THEME_URL_URI . '/assets/img/logo.png' ?>" alt=""> </a>
+                </div>
+                <div class="right-logo-box">
+                    <div class="bottom-mb">
+                        <div class="search-mb">
+                            <div class="form-search">
+                                <form>
+                                    <input type="text" name="" placeholder="Nhập từ tìm kiếm...">
+                                    <a href="" class="btn btn-search" title=""> <img src="<?= THEME_URL_URI . '/assets/img/search.png' ?>" alt="">
+                                    </a>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="humberger-menu">
+                            <img src="<?= THEME_URL_URI . '/assets/img/humberger.png' ?>" alt="">
+                        </div>
 
                     </div>
                 </div>
-            </header>
-        <?php endif; ?>
+                <ul class="sub-menu">
+                    <li>
+                        <div class="list-menu-mb">
+                            <div class="icon">
+                                <img src="./<?= THEME_URL_URI . '/assets/img/102.png' ?>" alt="">
+                            </div>
+                            <a href="javascript:;" title="" class="btn"> Sản phẩm </a>
+                            <img src="./<?= THEME_URL_URI . '/assets/img/109.png' ?>" alt="" class="hide-sub">
+                            <img src="./<?= THEME_URL_URI . '/assets/img/109.png' ?>" alt="" class="show-sub">
+                            <ul class="list-sub">
+                                <li class="">
+                                    <a href="" title="" class="btn"> Sản phẩm 1 </a>
+                                </li>
+                                <li class="">
+                                    <a href="" title="" class="btn"> Sản phẩm 2</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list-menu-mb">
+                            <div class="icon">
+                                <img src="./<?= THEME_URL_URI . '/assets/img/106.png' ?>" alt="">
+                            </div>
+                            <a href="" title="" class="btn"> Quà tặng </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list-menu-mb">
+                            <div class="icon">
+                                <img src="./<?= THEME_URL_URI . '/assets/img/105.png' ?>" alt="">
+                            </div>
+                            <a href="" title="" class="btn"> Hot Deal </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list-menu-mb">
+                            <div class="icon">
+                                <img src="./<?= THEME_URL_URI . '/assets/img/103.png' ?>" alt="">
+                            </div>
+                            <a href="" title="" class="btn"> Kinh nghiệm </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list-menu-mb">
+                            <div class="icon">
+                                <img src="./<?= THEME_URL_URI . '/assets/img/107.png' ?>" alt="">
+                            </div>
+                            <a href="" title="" class="btn">Đi & viết </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list-menu-mb">
+                            <div class="icon">
+                                <img src="./<?= THEME_URL_URI . '/assets/img/101.png' ?>" alt="">
+                            </div>
+                            <a href="javascript:;" title="" class="btn"> Về Florist Việt Nam </a>
+                            <img src="./<?= THEME_URL_URI . '/assets/img/109.png' ?>" alt="" class="hide-sub">
+                            <img src="./<?= THEME_URL_URI . '/assets/img/109.png' ?>" alt="" class="show-sub">
+                            <ul class="list-sub">
+                                <li class="">
+                                    <a href="" title="" class="btn"> Về Florist Việt Nam 1 </a>
+                                </li>
+                                <li class="">
+                                    <a href="" title="" class="btn"> Về Florist Việt Nam 2</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list-menu-mb">
+                            <div class="icon">
+                                <img src="./<?= THEME_URL_URI . '/assets/img/108.png' ?>" alt="">
+                            </div>
+                            <a href="javascript:;" title="" class="btn"> Ngôn ngữ </a>
+                            <img src="./<?= THEME_URL_URI . '/assets/img/109.png' ?>" alt="" class="hide-sub">
+                            <img src="./<?= THEME_URL_URI . '/assets/img/109.png' ?>" alt="" class="show-sub">
+                            <ul class="list-sub">
+                                <li class="ngonngu-mb">
+                                    <a href="" title="" class="btn"> Tiếng Việt <img src="./<?= THEME_URL_URI . '/assets/img/vietnam.png' ?>" alt="">
+                                    </a>
+                                </li>
+                                <li class="ngonngu-mb">
+                                    <a href="" title="" class="btn"> Tiếng Anh <img src="./<?= THEME_URL_URI . '/assets/img/anh.png' ?>" alt=""> </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list-menu-mb">
+                            <div class="icon">
+                                <img src="./<?= THEME_URL_URI . '/assets/img/104.png' ?>" alt="">
+                            </div>
+                            <a href="" title="" class="btn"> đăng nhập </a>
+                        </div>
+                    </li>
+                    <li class="close-mb">
+                        <img src="./<?= THEME_URL_URI . '/assets/img/110.png' ?>" alt="">
+                    </li>
+                    <li class="hl-mb">
+                        <img src="./<?= THEME_URL_URI . '/assets/img/111.png' ?>" alt="">
+                        <p>HOTLINE: <strong> <a href="" title="">0369 745 858</a></strong></p>
+                    </li>
+                </ul>
+            </div>
+        </header>
+<?php endif; ?>

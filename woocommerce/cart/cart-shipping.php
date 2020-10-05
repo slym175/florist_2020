@@ -43,7 +43,7 @@ $calculator_text = '';
                     $method_des = 'Từ Km thứ 10 trở đi vận chuyển 13.000 đồng/km';
                     break;
                 case 'flat_rate11':
-                    $method_des = 'Muốn thỏa thuận với NEWSUN';
+                    $method_des = 'Muốn thỏa thuận với florist';
                     break;
             }
             printf('<label for="shipping_method_%1$s_%2$s">%3$s <p class="mb-0 font-weight-bold">'.$method_des.'</p></label>', $index, esc_attr(sanitize_title($method->id)), wc_cart_totals_shipping_method_label($method)); // WPCS: XSS ok.

@@ -21,7 +21,7 @@ $locations = new WP_Query($args);
             <div class="container">
                 <div class="row pt-lg-5 pt-4">
                     <div class="col-md-12 mb-4">
-                        <h2 class="text-center">HỆ THỐNG SIÊU THỊ ĐIỆN MÁY NEWSUN</h2>
+                        <h2 class="text-center">HỆ THỐNG SIÊU THỊ ĐIỆN MÁY florist</h2>
                     </div>
                     <div class="col-md-3 left" style="margin-bottom: 15px">
                         <select name="" id="country_select" class="form-control">
@@ -67,7 +67,7 @@ $locations = new WP_Query($args);
             </div>
             <div class="col-md-8 left">
                 <div class="col-md-12 text-lg-left p-0">
-                    <div class="maps-newsun" id="maps-newsun">
+                    <div class="maps-florist" id="maps-florist">
 
                     </div>
                 </div>

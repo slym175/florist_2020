@@ -1,67 +1,209 @@
-<?php
-$vs = '1.0.0';
-?>
-<!doctype html>
-<html lang="vi">
+<!DOCTYPE html>
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <title><?= get_the_title() ?></title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=0">
-
-    <?php $vs='1.1.4'; ?>
-    <script src="https://kit.fontawesome.com/30dda5888f.js"  crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?= THEME_URL_URI ?>/assets/OwlCarousel/dist/assets/owl.carousel.min.css">
-<!--    <link rel="stylesheet" href="/assets/OwlCarousel/dist/assets/owl.theme.default.min.css">-->
-    <link rel="stylesheet" href="<?= THEME_URL_URI ?>/assets/css/mobile/style.css?v=<?= $vs ?>">
-    <link rel="stylesheet" href="<?= THEME_URL_URI ?>/assets/css/mobile/thanh_fix.css?v=<?=$vs?>">
-    <style>
-        .opacity0 {
-            opacity: 0;
-        }
-        .amp-img {
-            width: 100%;
-        }
-    </style>
-    <script src="<?= THEME_URL_URI ?>/assets/js/mobile/jquery.js"></script>
-    <link rel='stylesheet' id='woocommerce-general-css'  href='/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=4.3.0' type='text/css' media='all' />
-
-    <style id='woocommerce-inline-inline-css' type='text/css'>
-        .woocommerce form .form-row .required { visibility: visible; }</style>
-    <?php if(is_page('checkout')){
-        wp_head();
-    } ?>
+	<title> Trang chủ mobile</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<?php wp_head() ?>
 </head>
 
 <body>
-    <!-- start header -->
-    <header class="">
-        <img src="<?= THEME_URL_URI ?>/assets/assets/mobile/Image 12.png" alt="Banner" height="52" width="100%" />
-        <nav class="navbar navbar-expand-xl navbar-light app-nav-bar p-0">
-            <div class="d-flex justify-content-around align-items-center w-100">
-                <a class="navbar-brand" href="<?= home_url() ?>">
-                    <img src="<?= get_theme_mod('logo_mobile') ?>" alt="Logo" height="21" width="45" />
-                </a>
-                <div class="search-input">
-                    <?php get_product_search_form('mobile'); ?>
-                </div>
-                <?php
-                get_template_part('mobile/template_parts/menu/menu', 'header');
-                ?>
+	<header>
+		<div class="header-pc">
+			<div class="header-top">
+				<div class="container">
+					<div class="row">
+						<div class="logo">
+							<div class="img">
+                                <a href="<?= home_url() ?>" title=""> <img src="<?= get_theme_mod( 'logo' ) ? get_theme_mod( 'logo' ) : THEME_URL_URI.'/assets/img/logo.png' ?>" alt="Logo"> </a>
+							</div>
+						</div>
+						<div class="info">
+							<div class="list-action">
+								<ul class="login">
+									<li><a href="" title=""> <span> <img src="<?= THEME_URL_URI . '/assets/img/dn.png' ?>" alt=""> </span> Đăng
+											nhập </a> </li>
+									<li><a href="" title="" class="gh"> <img src="<?= THEME_URL_URI . '/assets/img/gh.png' ?>" alt=""><span> 0
+											</span> </a> </li>
+									<li>
+										<div class="img">
+											<img src="<?= THEME_URL_URI . '/assets/img/vn.png' ?>" alt="">
+											<img src="<?= THEME_URL_URI . '/assets/img/vn.png' ?>" alt="" class="english">
+										</div>
+										<span class="select-item">
+											<select>
+												<option> vi </option>
+												<option> en </option>
+											</select>
+											<img src="./<?= THEME_URL_URI . '/assets/img/select.png' ?>" alt="">
+										</span>
+									</li>
+								</ul>
+							</div>
+							<div class="search-form">
+								<div class="hotline">
+									<span> <img src="<?= THEME_URL_URI . '/assets/img/hotline.png' ?>" alt=""> </span>
+									<span>
+										<p>Hotline:</p>
+										<a href="" title=""><strong>0818 596 696</strong></a>
+									</span>
+								</div>
+								<div class="form-search">
+                                    <?php get_search_form(); ?>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-menu">
+				<div class="container">
+					<div class="row">
+						<ul class="menu-pc">
+							<li class="active"> <a href="" title=""> trang chủ </a> </li>
+							<li class=""> <a href="" title=""> SẢN PHẨM </a> </li>
+							<li class=""> <a href="" title=""> HOT DEAL </a> </li>
+							<li class=""> <a href="" title=""> QUÀ TẶNG </a> </li>
+							<li class=""> <a href="" title=""> KINH NGHIỆM </a> </li>
+							<li class=""> <a href="" title=""> ĐI & VIẾT </a> </li>
+							<li class=""> <a href="" title=""> VỀ FLORIST VIETNAM </a> </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-mb">
+			<div class="logo-mb">
+				<a href="" title=""> <img src="<?= THEME_URL_URI . '/assets/img/logo.png' ?>" alt=""> </a>
+			</div>
+			<div class="right-logo-box">
+				<div class="bottom-mb">
+					<div class="search-mb">
+						<div class="form-search">
+							<form>
+								<input type="text" name="" placeholder="Nhập từ tìm kiếm...">
+								<a href="" class="btn btn-search" title=""> <img src="<?= THEME_URL_URI . '/assets/img/search.png' ?>" alt="">
+								</a>
+							</form>
+						</div>
+					</div>
+					<div class="humberger-menu">
+						<img src="<?= THEME_URL_URI . '/assets/img/humberger.png' ?>" alt="">
+					</div>
 
-            </div>
-            <?php if(is_front_page()) : ?>
-                <div class="px-3 branch-location">
-                    <a href="<?= get_page_link(PAGE_SHOPADDRESS_ID) ?>">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Xem danh sách các chi nhánh (8:00 - 18:00)</span>
-                    </a>
-                </div>
-            <?php endif ?>
-            <?php get_view('mobile/nt_templates/content/home/category.php'); ?>
-        </nav>
-    </header>
-    <!-- end header -->
-    <!-- start main -->
-    <main>
+				</div>
+			</div>
+			<div class="sub-menu">
+				<div class="sm-list">
+					<div class="block-mb one">
+						<div class="block-item">
+							<div class="icon">
+								<img src="<?= THEME_URL_URI . '/assets/img/102.png' ?>" alt="">
+							</div>
+							<div class="block-title">
+								<a href="javascript:;" title=""> Sản phẩm </a>
+								<img src="<?= THEME_URL_URI . '/assets/img/109.png' ?>" alt="" class="hover">
+							</div>
+							<div class="block-text">
+								<ul>
+									<li><a href="" title=""> Sản phẩm 1 </a></li>
+									<li><a href="" title=""> Sản phẩm 2 </a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="block-item">
+							<div class="icon">
+								<img src="<?= THEME_URL_URI . '/assets/img/106.png' ?>" alt="">
+							</div>
+							<div class="block-title">
+								<a href="" title="">Quà tặng</a>
+							</div>
+						</div>
+						<div class="block-item">
+							<div class="icon">
+								<img src="<?= THEME_URL_URI . '/assets/img/105.png' ?>" alt="">
+							</div>
+							<div class="block-title">
+								<a href="" title="">Hot Deal</a>
+							</div>
+						</div>
+						<div class="block-item">
+							<div class="icon">
+								<img src="<?= THEME_URL_URI . '/assets/img/103.png' ?>" alt="">
+							</div>
+							<div class="block-title">
+								<a href="" title="">Kinh nghiệm</a>
+							</div>
+						</div>
+						<div class="block-item">
+							<div class="icon">
+								<img src="<?= THEME_URL_URI . '/assets/img/107.png' ?>" alt="">
+							</div>
+							<div class="block-title">
+								<a href="" title="">Đi & viết</a>
+							</div>
+						</div>
+						<div class="block-item">
+							<div class="icon">
+								<img src="<?= THEME_URL_URI . '/assets/img/101.png' ?>" alt="">
+							</div>
+							<div class="block-title">
+								<a href="javascript:;" title="">Về Florist Việt Nam</a>
+								<img src="<?= THEME_URL_URI . '/assets/img/109.png' ?>" alt="" class="hover">
+							</div>
+							<div class="block-text">
+								<ul>
+									<li>
+										<a href="" title="">Về Florist Việt Nam 1</a>
+									</li>
+									<li>
+										<a href="" title="">Về Florist Việt Nam 2</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="block-item">
+							<div class="icon">
+								<img src="<?= THEME_URL_URI . '/assets/img/108.png' ?>" alt="">
+							</div>
+							<div class="block-title">
+								<a href="" title="">Ngôn ngữ</a>
+								<img src="<?= THEME_URL_URI . '/assets/img/109.png' ?>" alt="" class="hover">
+							</div>
+							<div class="block-text">
+								<ul>
+									<li><a href="" title="">Tiếng Việt <img src="<?= THEME_URL_URI . '/assets/img/vietnam.png' ?>" alt=""></a>
+									</li>
+									<li><a href="" title="">Tiếng Anh <img src="<?= THEME_URL_URI . '/assets/img/anh.png' ?>" alt=""></a> </a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="block-item">
+							<div class="icon">
+								<img src="<?= THEME_URL_URI . '/assets/img/104.png' ?>" alt="">
+							</div>
+							<div class="block-title">
+								<a href="" title="">Đăng nhập</a>
+							</div>
+						</div>
+						<div class="block-item">
+							<div class="close-mb">
+								<img src="<?= THEME_URL_URI . '/assets/img/110.png' ?>" alt="">
+							</div>
+						</div>
+						<div class="block-item block-item-hotline">
+							<div class="hl-mb">
+								<img src="<?= THEME_URL_URI . '/assets/img/111.png' ?>" alt="">
+								<p>HOTLINE: <strong> <a href="" title="">0369 745 858</a></strong></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>

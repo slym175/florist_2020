@@ -1,8 +1,4 @@
 <?php
-if (wp_is_mobile()) :
-    get_footer('mobile');
-else :
-
     $menuLocations = get_nav_menu_locations(); // Get our nav locations (set in our theme, usually functions.php)
     // This returns an array of menu locations ([LOCATION_NAME] = MENU_ID);
 
@@ -13,136 +9,83 @@ else :
     $footerRight = wp_get_nav_menu_items($menu_right_id);
 
 ?>
-    <footer class="container-fluid mt-md-3 mt-2">
-        <div class="row p-md-4 p-2 footer-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-12 pl-lg-0 pt-2">
-                        <h6 class="font-weight-bold">THÔNG TIN NEWSUN</h6>
-                        <div>
-                            <?php if ($footerLeft) : ?>
-                                <?php foreach ($footerLeft as $key => $ftl) : ?>
-                                    <?php if ($key <= 3) : ?>
-                                        <div class="py-1">
-                                            <a href="<?= $ftl->url ?>"><?= $ftl->title ?></a>
-                                        </div>
-                                        <?php unset($footerLeft[$key]) ?>
-                                    <?php endif; ?>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
-                        </div>
-                        <div class="collapse" id="ns-info">
-                            <?php if ($footerLeft) : ?>
-                                <?php foreach ($footerLeft as $key => $ftl) : ?>
-                                    <div class="py-1">
-                                        <a href="<?= $ftl->url ?>"><?= $ftl->title ?></a>
-                                    </div>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
-                        </div>
-                        <a class="font-weight-bold" data-toggle="collapse" href="#ns-info" role="button" aria-expanded="false" aria-controls="ns-info">Xem thêm <i class="fas fa-chevron-down"></i></a>
-                    </div>
+    <footer>
+		<div class="footer-pc">
+			<div class="container container-fluid">
+				<div class="row">
+					<div class="col-md-4 footer-1">
+						<div class="logo-footer">
+							<a href="" title=""> <img src="<?= THEME_URL_URI . '/assets/img/logot.png' ?>" alt=""> </a>
+						</div>
+						<ul class="list-dc">
+							<li> <span> <img src="<?= THEME_URL_URI . '/assets/img/dc.png' ?>" alt=""></span>
+								<p>61A, Khu nhà phố Thủy Nguyên, KĐT Ecopark, Văn Giang, Hưng Yên</p>
+							</li>
+							<li> <span> <img src="<?= THEME_URL_URI . '/assets/img/phone.png' ?>" alt=""></span>
+								<p>0963 596 696</p>
+							</li>
+							<li> <span> <img src="<?= THEME_URL_URI . '/assets/img/mail.png' ?>" alt=""></span>
+								<p>floristviet@gmail.com</p>
+							</li>
+							<li>
+								<a href="" title=""> <img src="<?= THEME_URL_URI . '/assets/img/face.png' ?>" alt=""></a>
+								<a href="" title=""> <img src="<?= THEME_URL_URI . '/assets/img/ins.png' ?>" alt=""></a>
+								<a href="" title=""> <img src="<?= THEME_URL_URI . '/assets/img/icon3.png' ?>" alt=""></a>
+								<a href="" title=""> <img src="<?= THEME_URL_URI . '/assets/img/icon4.png' ?>" alt=""></a>
+								<a href="" title=""> <img src="<?= THEME_URL_URI . '/assets/img/icon5.png' ?>" alt=""></a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-3 footer-default">
+						<h5>VỀ FLORIST VIETNAM</h5>
+						<ul class="list-cate">
+							<li> <a href="" title=""> Giới thiệu</a> </li>
+							<li> <a href="" title=""> Liên hệ</a> </li>
+							<li> <a href="" title=""> Tuyển dụng </a> </li>
+						</ul>
+					</div>
+					<div class="col-md-2 footer-default">
+						<h5>DANH MỤC</h5>
+						<ul class="list-cate">
+							<li> <a href="" title=""> Quà tặng</a> </li>
+							<li> <a href="" title=""> Kinh nghiệm</a> </li>
+							<li> <a href="" title=""> Đi & viết </a> </li>
+						</ul>
+					</div>
+					<div class="col-md-3 footer-default">
+						<h5>NHẬN THÔNG TIN TỪ FLORIST VIETNAM</h5>
+						<p>Xin vui lòng để lại địa chỉ email, chúng tôi sẽ cập nhật những tin tức mới nhất của Florist
+							Việt Nam tới quý khách.</p>
+						<form class="form-footer">
+							<span>
+								<input type="" name="" placeholder="Nhập email của bạn...">
+								<a href="" title=""> <img src="<?= THEME_URL_URI . '/assets/img/gui.png' ?>" alt=""> </a>
+							</span>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="copyrightter">
+				@2020 Bản quyền thuộc công ty <a href="" title=""> Florist Việt Nam</a>
+			</div>
+		</div>
+	</footer>
 
-                    <div class="col-lg-3 col-md-6 col-12 d-flex flex-column pt-2">
-                        <h6 class="font-weight-bold">HỖ TRỢ KHÁCH HÀNG</h6>
-                        <div>
-                            <?php if ($footerRight) : ?>
-                                <?php foreach ($footerRight as $k => $ftr) : ?>
-                                    <?php if ($k <= 3) : ?>
-                                        <div class="py-1">
-                                            <a href="<?= $ftr->url ?>"><?= $ftr->title ?></a>
-                                        </div>
-                                        <?php unset($footerRight[$k]) ?>
-                                    <?php endif; ?>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
-                        </div>
-                        <div class="collapse" id="ns-support">
-                            <?php if ($footerRight) : ?>
-                                <?php foreach ($footerRight as $k => $ftr) : ?>
-                                    <div class="py-1">
-                                        <a href="<?= $ftr->url ?>"><?= $ftr->title ?></a>
-                                    </div>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
-                        </div>
-                        <a class="font-weight-bold" data-toggle="collapse" href="#ns-support" role="button" aria-expanded="false" aria-controls="ns-support">Xem thêm <i class="fas fa-chevron-down"></i></a>
-                    </div>
+	<a href="#" class="icon-link backtotop" title=""> <img src="<?= THEME_URL_URI . '/assets/img/top.png' ?>" alt=""> </a>
+	<a href="" class="icon-link icon-1" title=""> <img src="<?= THEME_URL_URI . '/assets/img/i1.png' ?>" alt=""> </a>
+	<a href="" class="icon-link icon-2" title=""> <img src="<?= THEME_URL_URI . '/assets/img/i2.png' ?>" alt=""> </a>
+	<a href="" class="icon-link icon-3" title=""> <img src="<?= THEME_URL_URI . '/assets/img/i3.png' ?>" alt=""> </a>
+	<a href="" class="icon-link icon-4" title=""> <img src="<?= THEME_URL_URI . '/assets/img/i4.png' ?>" alt=""> </a>
 
-                    <div class="col-lg-3 col-md-6 col-12 d-flex flex-column pt-2">
-                        <h6 class="font-weight-bold">TỔNG ĐÀI HỖ TRỢ (GỌI MIỄN PHÍ)</h6>
-                        <table>
-                            <tr>
-                                <td>
-                                    <span>Mua hàng: <span class="font-weight-bold">0934.6688.11</span></span>
-                                </td>
-                                <td class="pl-2">
-                                    <span class="w-100 text-right">8:00 - 22:00</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span>Kỹ thuật: <span class="font-weight-bold">096.139.1551</span></span>
-                                </td>
-                                <td class="pl-2">
-                                    <span class="w-100 text-right">8:00 - 22:00</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span>Bảo hành: <span class="font-weight-bold">03.8871.8871</span></span>
-                                </td>
-                                <td class="pl-2">
-                                    <span class="w-100 text-right">8:00 - 22:00</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <span>Khiếu nại: <span class="font-weight-bold">03.8871.8871</span></span>
-                                </td>
-                                <td class="pl-2">
-                                    <span class="w-100 text-right">8:00 - 22:00</span>
-                                </td>
-                            </tr>
-                        </table>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <a href="#">
-                                <img src="<?= THEME_URL_URI . '/assets/images/14971568174511_da-thong-bao-bo-cong-thuong.png' ?>" alt="Cer">
-                            </a>
-                            <a href="#">
-                                <img src="<?= THEME_URL_URI . '/assets/images/dmca_protected_sml_120n.png' ?>" alt="Cer">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-12 d-flex flex-column social pr-md-0 pt-2">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0&appId=196686057561795&autoLogAppEvents=1" nonce="LO5IiGEC"></script>
-                            <div class="fb-like" data-href="https://www.facebook.com/dienmaynewsun/" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="false"></div>
-
-                        </div>
-                        <p class="mt-4">Website cùng tập đoàn:</p>
-                        <a href="https://dienmaynewsun.com/" title="">
-                            <img class="logo" src="<?= THEME_URL_URI ?>/assets/assets/logo.png" alt="Logo">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row footer-2 py-2">
-            <div class="container">
-                <p>© <?= date('Y') ?>. Công Ty Cổ Phần Sản Xuất Và Xuất Nhập Khẩu Tân Thái Sơn. GPDKKD: 0107742332 do Sở kế hoạch và
-                    đầu tư Tp. Hà Nội cấp ngày 02/01/2007.</p>
-                <p>Địa chỉ: 214/19 đường Nguyễn Xiển, Q. Thanh Xuân, Tp. Hà Nội. Điện thoại: 0934.6688.11. Email:
-                    newsun@dienmaynewsun.com. Xem chính sách sử dụng web</p>
-            </div>
-            <a href="#" class="top-up"><i class="fas fa-arrow-up"></i></a>
-        </div>
-    </footer>
-
-    <?php wp_footer() ?>
+	<div class="icon-box-mb">
+		<a href="" class="icon-mb" title=""> <img src="<?= THEME_URL_URI . '/assets/img/i1.png' ?>" alt=""> </a>
+		<a href="" class="icon-mb" title=""> <img src="<?= THEME_URL_URI . '/assets/img/i2.png' ?>" alt=""> </a>
+		<a href="" class="icon-mb" title=""> <img src="<?= THEME_URL_URI . '/assets/img/i3.png' ?>" alt=""> </a>
+		<a href="" class="icon-mb" title=""> <img src="<?= THEME_URL_URI . '/assets/img/i4.png' ?>" alt=""> </a>
+		<a href="#" class="icon-mb backtotop" title=""> <img src="<?= THEME_URL_URI . '/assets/img/top.png' ?>" alt=""> </a>
     </div>
-    </body>
+    
+    <?php wp_footer() ?>
+</body>
 
-    </html>
-<?php endif; ?>
+</html>

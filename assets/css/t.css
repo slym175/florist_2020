@@ -1,0 +1,22 @@
+.cate-nav .item:hover,
+.cate-nav .item:focus {
+    outline: none;
+}
+
+.product-item .img,
+.product-item .img:focus,
+.product-item .img:hover {
+    outline: none;
+}
+
+.section-notfound .not-found .btn-page {
+    white-space: nowrap;
+}
+
+#searchsubmit,
+#searchsubmit:hover,
+#searchsubmit:focus,
+#searchsubmit:active {
+    outline: none;
+    box-shadow: none;
+}

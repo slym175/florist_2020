@@ -24,7 +24,7 @@ class ClaHelper{
     }
 }
 
-function newsun_breadcrumbs() {
+function florist_breadcrumbs() {
 
     $delimiter = "";
 

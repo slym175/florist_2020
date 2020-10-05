@@ -6,7 +6,7 @@
  * Date: 6/24/2020
  * Time: 11:43 AM
  */
-class NewsunWoocommerce
+class floristWoocommerce
 {
 
     function __construct()

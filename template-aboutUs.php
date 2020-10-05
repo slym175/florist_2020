@@ -13,7 +13,7 @@ get_header('aboutus');
     <section id="section-bannergioithieu text-justify">
         <img src="<?= get_the_post_thumbnail_url(get_the_ID()) ?>" style="width: 100%">
     </section>
-    <section class="section-gioithieunewsun">
+    <section class="section-gioithieuflorist">
         <div class="container">
             <div class="row pt-md-4 pt-3">
                 <div class="col-md-12">

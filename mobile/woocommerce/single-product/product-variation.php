@@ -7,7 +7,7 @@
  * Time: 5:00 PM
  */
 global $product;
-$woo = new WoocommerceNewsun();
+$woo = new Woocommerceflorist();
 $sales_price_from = get_post_meta($product->get_id(), '_sale_price_dates_from', true);
 $sales_price_to = get_post_meta($product->get_id(), '_sale_price_dates_to', true);
 

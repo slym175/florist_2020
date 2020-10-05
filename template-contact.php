@@ -36,9 +36,9 @@ get_header('aboutus');
                     <p><strong>Địa chỉ:</strong>Số 2B ngõ 16B Nguyễn Xiển - Thanh Xuân - Hà Nội( Cách ngã tư Khuất Duy
                         Tiến 200m</p>
                     <p><strong>Tổng đài hỗ trợ:</strong>0961 555 155 / 0934 66 88 11</p>
-                    <p><strong>Email:</strong>kinhdoanh@dienmaynewsun.com</p>
+                    <p><strong>Email:</strong>kinhdoanh@dienmayflorist.com</p>
                     <p><strong>Thời gian làm việc:</strong>Từ 8:00 đến 18:00 tất cả các ngày trong tuần ( trừ CN)</p>
-                    <i>Xin chân thành quý khách hàng đã tin tưởng và sử dụng các sản phẩm của NEWSUN trong những năm
+                    <i>Xin chân thành quý khách hàng đã tin tưởng và sử dụng các sản phẩm của florist trong những năm
                         qua! Hi vọng sẽ luôn nhận được sự ủng hộ hơn nữa trong tương lai! Kính chúc quý khách sức khỏe
                         và an khang! </i>
                 </div>

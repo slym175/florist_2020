@@ -65,7 +65,7 @@ if ($cat_id) {
         <div class="col-12">
             <nav aria-label="breadcrumb" class="m-breadcrumb">
                 <ol class="breadcrumb m-0">
-                    <?= newsun_breadcrumbs(); ?>
+                    <?= florist_breadcrumbs(); ?>
                 </ol>
             </nav>
         </div>

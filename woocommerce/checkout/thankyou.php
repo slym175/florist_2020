@@ -20,6 +20,6 @@ defined( 'ABSPATH' ) || exit;
 
 <div class="woocommerce-order" style="text-align: center">
 
-	<h2 style="text-align: center;margin-top: 15px">Cảm ơn quý khách đã mua hàng tại Newsun.</h2>
+	<h2 style="text-align: center;margin-top: 15px">Cảm ơn quý khách đã mua hàng tại florist.</h2>
     <a href="<?= home_url() ?>" class="btn btn-success">Tiếp tục mua hàng</a>
 </div>

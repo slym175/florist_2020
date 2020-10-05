@@ -14,7 +14,6 @@ if (wp_is_mobile()) {
         the_post();
         the_content();
     }
-    do_shortcode('[ns_list_tags]');
     get_footer('mobile');
 } else {
     get_header('');
@@ -23,6 +22,5 @@ if (wp_is_mobile()) {
         the_post();
         the_content();
     }
-    do_shortcode('[ns_list_tags]');
     get_footer();
 }
