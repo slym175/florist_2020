@@ -1,0 +1,48 @@
+.c-form-check input[type=radio]:checked~label:before {
+    background-image: url('../images/2906/Group 2821.png');
+}
+.maps-newsun iframe{
+    width: 100%;
+}
+#wpdcom .wpd-form-row .wpd-form-col-left {
+    width: 100%;
+}
+.wc_name-wrapper{
+    float: left;
+    width: 49% !important;
+}
+.wc_email-wrapper{
+    float: right;
+    width: 49% !important;
+}
+#wpdcom .wc-field-submit{
+    display: block;
+}
+.wc-field-submit .wpd_label{
+    display: none !important;
+}
+
+#wpdcom {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#wpdcom .wpd-form-head {
+    display: none;
+}
+#comments{
+    max-width: 100%;
+    margin: 0px auto
+}
+.wpd-field-comment .wpd-avatar{
+    display: none;
+}
+#wpdcom .wpd-form-foot {
+    margin-left: 0px;
+}
+.wpd-field-rating{
+    display: flex;
+}
+.wpd-field-rating .wpd-field-group-title {
+    margin-right: 10px;
+}

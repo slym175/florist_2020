@@ -1,0 +1,337 @@
+.htstdm1 .right .hethong-items p {
+    padding-left: 30px;
+}
+
+.htstdm1 .right .info-items i {
+    font-size: 18px;
+}
+
+.htstdm1 .right .info-items .content-box {
+    padding-left: 0;
+}
+
+.tab-items a {
+    font-size: 12px;
+}
+
+.tab-items a:hover {
+    text-decoration: none;
+    color: var(--bg-navbar-color) !important;
+}
+
+.tab-items .active:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: -50%;
+    left: 45%;
+    border-bottom: 8px solid var(--bg-navbar-color);
+    background-color: transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.tab-items .active:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: var(--bg-navbar-color);
+    left: 0;
+    bottom: -50%;
+
+
+}
+
+.tab-items .active {
+    position: relative;
+}
+
+.menu-tab .tabcontent {
+    display: block;
+}
+
+.post-tabs .menu-tab .menu-small {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.post-tabs .menu-tab .menu-small a {
+    display: flex;
+    padding-top: 10px;
+    color: #000;
+    font-size: 14px;
+
+}
+
+.post-tabs .menu-tab .menu-small a:last-child {
+    padding-bottom: 10px;
+
+}
+
+.post-tabs .menu-tab .menu-small a:hover {
+    color: #578fe1;
+}
+
+.ns-breadcrumb li {
+    font-size: 14px;
+}
+
+.ns-breadcrumb li a {
+    color: #141414;
+}
+
+.ns-breadcrumb li a:hover {
+    text-decoration: none;
+}
+
+.ns-breadcrumb li:before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+    transform: rotateZ(45deg);
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    left: -20px;
+    top: 8px;
+
+}
+
+.post-tabs img {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 575px) {
+    .blogpost-reponsive {
+        padding-right: 15px;
+    }
+
+    .tab-items {
+        padding-left: 15px !important;
+    }
+
+    .tab-items a {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+}
+
+.post-tabs nav {
+    margin-bottom: 15px;
+}
+
+.border-right {
+    border-right: none;
+}
+
+.tabs-product .tab-items {
+    padding-left: 0;
+}
+
+
+
+.menu-small {
+    display: none;
+}
+
+
+.menutab-none .menu-small {
+    display: none;
+}
+
+.menutab .menu-default {
+    display: block;
+}
+
+.menutab p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    background-color: #EFF6FF;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    color: black;
+}
+
+.menutab p:hover {
+    background-color: #578FE1;
+    color: white;
+}
+
+.post-tabs .menu-tab .menutab p i {
+    float: right;
+    padding-top: 8px;
+}
+
+.title-page {
+    margin-top: 0;
+    margin-bottom: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: #EFF6FF;
+}
+
+.title-page:hover {
+    background-color: #578fe1;
+}
+
+.title-page:hover a {
+    color: white;
+}
+
+.menutab .title-page a {
+    color: black;
+}
+
+.menutab .title-page a i {
+    float: right;
+    padding-top: 8px;
+}
+
+.menutab .title-page:hover {
+    background-color: #578FE1;
+    color: white;
+}
+
+
+
+/* TAB DANH MỤC  */
+
+.list-item {
+    list-style: none;
+    padding-left: 0;
+}
+
+/*.item {
+    margin-bottom: 10px;
+}*/
+
+.span {
+    color: #fff;
+    padding: 15px;
+    background-color: #eff6ff;
+}
+
+.item .menu-small {
+    display: none
+}
+
+.item.active .menu-small {
+    display: block;
+    background-color: #eff6ff;
+    padding-left: 30px;
+}
+
+.title-page a {
+    color: black;
+}
+
+.title-page a i {
+    float: right;
+}
+
+form .col-md-6 {
+    float: left;
+}
+
+.section-comment textarea {
+    border: 1px solid #D1D1D1;
+}
+
+/* list GIOI THIEU NEWSUN */
+.list-item-gioithieu {
+    padding-left: 0;
+}
+
+.list-item-gioithieu li {
+    font-size: 14px;
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+    padding-left: 16px;
+    margin-bottom: 0px;
+    list-style-type: none;
+}
+
+.list-item-gioithieu li:hover {
+    background-color: #578fe1;
+}
+
+.list-item-gioithieu li:hover a {
+    color: #fff;
+}
+
+.news .tutorial .items span {
+    display: flex;
+}
+
+
+/* CHỈNH SỬA CSS NGÀY 17/7  */
+.ns-breadcrumb li {
+    font-size: 14px;
+}
+
+.ns-breadcrumb li:before {
+    width: 6px;
+    height: 6px;
+}
+
+.section-tag .pt-3 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.section-gioithieunewsun,
+.section-tag {
+    background-color: #fff;
+}
+
+.page-template-template-contact .container-fluid,
+.page-template-template-aboutUs .container-fluid,
+.page-template-template-location .container-fluid,
+.post-template-default .container-fluid,
+.product-template-default .container-fluid {
+    background-color: #fff;
+}
+
+.section-gioithieunewsun p b {
+    color: #ED1C24;
+}
+
+#formcmmaxweb input#submit:hover {
+    background: #4094dc;
+}
+
+.section-form input::placeholder {
+    color: #141414;
+}
+
+.hethongdsieuthi2 .right-slogan {
+    margin-top: 80px;
+}
+
+/* tag */
+.section-tag .items-tags .tag {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.list-news .h-news .hash-tags .h-tag {
+    display: inline-block;
+    text-align: center;
+}
+.return-to-shop {
+    text-align: center;
+}

@@ -1,0 +1,14 @@
+/* CSS TRANG */
+@import url('fixpage.css');
+@import url('./css-tr/formlienhe.css');
+@import url('./css-tr/comment.css');
+@import url('./css-tr/tag.css');
+@import url('./css-tr/huongdanmuahang.css');
+@import url('./css-tr/listbox.css');
+@import url('./css-tr/hethongsieuthi.css');
+@import url('./css-tr/gioithieunewsun.css');
+@import url('./css-tr/tabs-baivietchitiet.css');
+@import url('./css-tr/fix.css');
+/*@import url('../css/css-tr/fixmobile.css');*/
+
+@import url('trangchu.css');

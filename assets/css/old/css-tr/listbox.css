@@ -1,0 +1,59 @@
+
+.section-huongdanmuahang .menu-right{
+    margin-top:20px;
+    padding-right:30px;
+}
+
+#menuright .activep{
+    background-color: #578fe1;
+    color: black;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+    padding-left: 16px;
+    margin-bottom: 0px;
+}
+#menuright .activep a{
+    color: white;
+
+}
+
+.menu-right i{
+    font-size: 10px;
+    color:#f8d43a;
+}
+.menu-right .default:hover{
+    background-color: #578fe1;
+    transition: 0.2s;
+    color:white;
+}
+activep{
+    background-color: #578fe1;
+    transition: 0.2s;
+    color:white;
+}
+.menu-right .default{
+    font-size: 14px;
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+    padding-left: 16px;
+    margin-bottom: 0px;
+}
+
+.menu-right .default:hover a{
+    color: white;
+}
+
+.menu-right a{
+    color: white;
+    padding-left: 5px;
+}
+.menu-right a{
+    color: black;
+}
+.menu-right a:hover{
+    text-decoration: none;
+}

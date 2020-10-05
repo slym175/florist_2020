@@ -1,0 +1,59 @@
+
+#sectionhuongdanmuahang .section-huongdanmuahang h2{
+    font-size: 24px;
+}
+#section-huongdanmuahang .right {
+    margin-left:15px;
+    margin-right:15px;
+}
+.section-huongdanmuahang .menu-right{
+    margin-top:20px;
+    padding-right:30px;
+}
+
+.section-huongdanmuahang .hr{
+    margin-left:15px;
+    margin-right:15px;
+}
+.section-huongdanmuahang b{
+    color: #ED1C24;
+}
+.button i{
+    font-size:12px;
+    margin-right: 8px;
+}
+.button .btn1{
+    background-color:#578fe1;
+}
+.button .btn1:hover{
+    color: white;
+}
+.button .btn2{
+    background-color:#0547A8;
+}
+.button .btn2:hover{
+    background-color:#0547A8;
+    color: white;
+}
+.section-huongdanmuahang .left .button img{
+    width:12px;
+}
+
+
+.blogpost .content-box p{
+    margin-top:15px;
+}
+.blogpost .content-box a{
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+}
+.blogpost .content-box a:hover{
+    color: #0547A8;
+    text-decoration: none;
+    transition: 0.5s;
+}
+#section-bannergioithieu img{
+    max-width: 100%;
+    height: auto;
+}

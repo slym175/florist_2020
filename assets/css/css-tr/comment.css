@@ -1,0 +1,67 @@
+.section-comment textarea{
+    border: 1px solid #D1D1D1;
+    border-radius: 3px;
+    height: 10.8rem;
+}
+
+.section-comment textarea:focus{
+    color: #495057;
+    background-color: #fff;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgba(0,123,255,.25);
+
+}
+.section-comment input[type=text]{
+    height: 155px;
+}
+.section-comment input[type=submit]{
+    position: absolute;
+    right: 29px;
+    bottom: 19px;
+}
+.section-comment a, .section-comment p{
+    font-size: 14px;
+    color:black;
+}
+.section-comment a:hover{
+    text-decoration: none;
+    color: grey;
+    transition: 0.5s;
+}
+.section-comment .content-box i{
+    font-size: 13px;
+    margin-left: 10px;
+    color: #578fe1;
+    margin-top: 4px;
+}
+.section-comment .content-box .fa-star{
+    font-size: 13px;
+    margin-left: 7px;
+    color: #f8d43a;
+
+}
+
+.section-gioithieunewsun .left .section-comment .content-box .fa-thumbs-up,.section-gioithieunewsun .left .section-comment .content-box .fa-comments{
+    margin-top:7px;
+}
+
+.loadcmt a{
+    font-size: 14px;
+    background-color: transparent;
+    color: #578fe1;
+    border: 1px solid #578fe1;
+    margin-top: 3%;
+    padding-top:3px;
+    padding-bottom:3px;
+}
+.loadcmt a:hover{
+    cursor: pointer;
+    color:white;
+    background-color: #578FE1;
+    transition: 0.2s;
+}
+
+.loadcmt a i{
+    font-size: 10px;
+    margin-left: 15px;
+}

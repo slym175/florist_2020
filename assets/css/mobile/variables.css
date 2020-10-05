@@ -1,0 +1,137 @@
+:root {
+    --c-white: #FFFFFF;
+    --c-black-29: #00000029;
+    --c-578FE1: #578FE1;
+    --c-393939: #393939;
+    --c-E9E9E9: #E9E9E9;
+    --c-F3F3F3: #F3F3F3;
+    --c-101010: #101010;
+    --c-949494: #949494;
+    --c-D1D1D1: #D1D1D1;
+    --c-141414: #141414;
+    --c-EFEFEF: #EFEFEF;
+    --c-ED1C24: #ED1C24;
+    --c-1E1E1E: #1E1E1E;
+    --c-F3D835: #F3D835;
+    --c-EFA625: #EFA625;
+    --c-EFA625-2: rgba(239, 166, 37, .3);
+    --c-3D80E3: #3D80E3;
+    --c-0547A8: #0547A8;
+    --c-black-1C: #0000001C;
+    --c-red: #FF0000;
+    --c-FFF5F5: #FFF5F5;
+    --c-707070: #707070;
+    --c-EFF6FF: #EFF6FF;
+    --c-4D4D4D: #4D4D4D;
+
+    --f-7: 7px;
+    --f-9: 9px;
+    --f-10: 10px;
+    --f-11: 11px;
+    --f-12: 12px;
+    --f-13: 13px;
+    --f-14: 14px;
+    --f-16: 16px;
+    --f-17: 17px;
+    --f-18: 18px;
+    --f-20: 20px;
+}
+
+.font-7 {
+    font-size: var(--f-7) !important;
+}
+
+.font-10 {
+    font-size: var(--f-10) !important;
+}
+
+.font-11 {
+    font-size: var(--f-11) !important;
+}
+
+.font-12 {
+    font-size: var(--f-12) !important;
+}
+
+.font-13 {
+    font-size: var(--f-13) !important;
+}
+
+.font-14 {
+    font-size: var(--f-14);
+}
+
+.font-16 {
+    font-size: var(--f-16) !important;
+}
+
+.font-17 {
+    font-size: var(--f-17) !important;
+}
+
+.font-18 {
+    font-size: var(--f-18) !important;
+}
+
+.text-1 {
+    color: var(--c-578FE1) !important;
+}
+
+.text-2 {
+    color: var(--c-141414) !important;
+}
+
+.text-3 {
+    color: var(--c-4D4D4D) !important;
+    font-weight: 500;
+}
+
+.text-4 {
+    color: var(--c-ED1C24) !important;
+}
+
+.text-5 {
+    color: var(--c-578FE1) !important;
+    font-weight: 500;
+}
+
+.text-6 {
+    color: #333 !important;
+}
+
+.text-6 > a{
+    color: #333 !important;
+}
+
+.bg-1 {
+    background-color: var(--c-EFF6FF) !important;
+}
+
+.bg-2 {
+    background-color: var(--c-E9E9E9) !important;
+}
+
+.bg-3 {
+    background-color: var(--c-393939) !important;
+}
+
+.bg-4 {
+    background-color: var(--c-578FE1) !important;
+}
+
+.lh-125 {
+    line-height: 1.25 !important;
+}
+
+.lh-15 {
+    line-height: 1.5 !important;
+}
+
+.o-8 {
+    opacity: .8;
+}
+
+.bb-1 {
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 1rem;
+}

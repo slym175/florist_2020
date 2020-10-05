@@ -1,0 +1,91 @@
+
+.section-form h2{
+    font-size: 16px;
+    color:#141414;
+    font-weight: 700;
+}
+
+.section-form p{
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+}
+.section-form i{
+    color: #578fe1;
+    font-size: 14px;
+    font-family: Segoe UI;
+}
+.section-form .form-item:focus{
+    color: #495057;
+    background-color: #fff;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgba(0,123,255,.25);
+}
+.section-form input{
+    border: 1px solid #D1D1D1;
+    padding: 0.7rem;
+}
+
+.section-form textarea{
+    border: 1px solid #D1D1D1;
+    border-radius: 3px;
+    height: 9.6rem;
+}
+
+
+
+@media screen and (max-width: 992px){
+    #section-banner {
+        background-image: none !important;
+        background-color: #578FE1;
+    }
+    .button-text .text-link{
+        float:left;
+    }
+    .tabs-product .tab-items button.active .bt-box{
+        left: 41% !important;
+    }
+    #menuright{
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+}
+.bannerhead img{
+    max-width: 100%;
+    height: auto;
+}
+
+#section-banner{
+    background-color: #578fe1;
+    padding-top: 84px;
+    padding-bottom: 84px;
+    background-image: url(../../assets/lienhe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#section-banner h1{
+    color: #fff;
+    font-size: 2.2rem;
+}
+#section-banner img{
+    width: 127px;
+    margin-top: -60px;
+}
+
+input{
+    border: 1px solid #707070;
+    border-radius:3px;
+}
+input:focus{
+    border:1px solid grey;
+}
+.btn{
+    background-color: #578fe1;
+    color: #fff;
+}
+.btn:hover{
+    color: #578fe1;
+    background-color: #fff;
+    transition: 0.5s;
+    border: 1px solid #578fe1;
+}
