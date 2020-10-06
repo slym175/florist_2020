@@ -182,6 +182,25 @@ class ClaWoocommerce{
         return absint( is_tax() ? get_queried_object()->slug : 0 );
     }
 
+    public function price_formater($price)
+    {
+        return wc_price( $price, array(
+            'ex_tax_label'       => false,
+            'currency'           => '',
+            'decimal_separator'  => wc_get_price_decimal_separator(),
+            'thousand_separator' => wc_get_price_thousand_separator(),
+            'decimals'           => wc_get_price_decimals(),
+            'price_format'       => get_woocommerce_price_format(),
+        ) );
+    }
+
+    public function get_percent_discount($regular, $sale)
+    {
+        if($sale >= $regular || $sale == 0){
+            return 0;
+        }
+        return round(($sale / $regular) * 100);
+    }
 
     protected function get_current_page_url()
     {

@@ -479,3 +479,15 @@ function get_term_post_count( $taxonomy = 'category', $term = '', $args = [] )
     // Return the post count
     return $q->found_posts;
 }
+
+function wpc_date($settings, $value) {
+    return '<div class="date-group">'
+           . '<input name="' . $settings['param_name'] . '" class="wpb_vc_param_value wpb-date ' . $settings['param_name'] . ' ' . $settings['type'] . '_field" type="text" value="' . $value . '"/>'
+           . '</div>';
+}
+vc_add_shortcode_param('wpc_date', 'wpc_date', get_template_directory_uri() . '/assets/js/date.js');
+ 
+function wpc_date_style() {
+    wp_enqueue_script('jquery-ui-datepicker' );
+}
+add_action( 'admin_enqueue_scripts', 'wpc_date_style' );

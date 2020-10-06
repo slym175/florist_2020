@@ -36,22 +36,8 @@
 							</li>
 						</ul>
 					</div>
-					<div class="col-md-3 footer-default">
-						<h5>VỀ FLORIST VIETNAM</h5>
-						<ul class="list-cate">
-							<li> <a href="" title=""> Giới thiệu</a> </li>
-							<li> <a href="" title=""> Liên hệ</a> </li>
-							<li> <a href="" title=""> Tuyển dụng </a> </li>
-						</ul>
-					</div>
-					<div class="col-md-2 footer-default">
-						<h5>DANH MỤC</h5>
-						<ul class="list-cate">
-							<li> <a href="" title=""> Quà tặng</a> </li>
-							<li> <a href="" title=""> Kinh nghiệm</a> </li>
-							<li> <a href="" title=""> Đi & viết </a> </li>
-						</ul>
-					</div>
+					<?php get_template_part('template_parts/menu/menu', 'footer', array('menu_name' => 'footer-menu-left','class' => 'col-md-3 footer-default')); ?>
+					<?php get_template_part('template_parts/menu/menu', 'footer', array('menu_name' => 'footer-menu-right','class' => 'col-md-2 footer-default')); ?>
 					<div class="col-md-3 footer-default">
 						<h5>NHẬN THÔNG TIN TỪ FLORIST VIETNAM</h5>
 						<p>Xin vui lòng để lại địa chỉ email, chúng tôi sẽ cập nhật những tin tức mới nhất của Florist

@@ -4,103 +4,81 @@
 // $post_ids = get_post_meta(get_the_ID(), 'view_mobile_rieng', false);
 // var_dump($post_ids);
 // die();
-if(!function_exists('st_slider_tour_ft')){
-    function st_slider_tour_ft($attr,$content = null)
+if(!function_exists('st_home_header_slider')){
+    function st_home_header_slider($attr,$content = null)
     {
         $attr = shortcode_atts([
-            'style' => 'List',
-            'list_slider' => '',
+            'banner_group_id'   => '',
+            'limit'             => '',
         ], $attr);
-        return nt()->load_template('layouts/elements/slider-home', '', array('attr' => $attr));
+        return nt()->load_template('content/home/slider', '', array('attr' => $attr));
     }
-    add_shortcode('st_slider_tour', 'st_slider_tour_ft');
+    add_shortcode('st_home_header_slider', 'st_home_header_slider');
 }
 
-if(!function_exists('nt_content_header')){
-    function nt_content_header($attr,$content = null)
+if(!function_exists('st_home_most_chosen_gift')){
+    function st_home_most_chosen_gift($attr,$content = null)
     {
         $attr = shortcode_atts([
-            'list_slider' => '',
-            'new_ids' => '',
-            'banner_group' => '',
-            'limit' => '',
-            'list_banner' => '',
+            'title'     => '',
+            'excerpt'   => '',
+            'image'     => '',
+            'limit'     => '',
         ], $attr);
-        return nt()->load_template('content/content-header', '', array('attr' => $attr));
+        return nt()->load_template('content/home/most-chosen-gift', '', array('attr' => $attr));
     }
-    add_shortcode('nt_content_header', 'nt_content_header');
+    add_shortcode('st_home_most_chosen_gift', 'st_home_most_chosen_gift');
 }
 
-if(!function_exists('st_product_sale')){
-    function st_product_sale($attr,$content = null)
+if(!function_exists('st_home_newest_products')){
+    function st_home_newest_products($attr,$content = null)
     {
         $attr = shortcode_atts([
-            'limit'         => '',
-            'banner_url'    => '',
+            'banner_group_id'   => '',
+            'title'             => '',
+            'excerpt'           => '',
+            'image'             => '',
+            'limit'             => '',
         ], $attr);
-        return nt()->load_template('products/product-sale', '', array('attr' => $attr));
+        return nt()->load_template('content/home/newest-product', '', array('attr' => $attr));
     }
-    add_shortcode('st_product_sale', 'st_product_sale');
+    add_shortcode('st_home_newest_products', 'st_home_newest_products');
 }
 
-if(!function_exists('st_product_in_category')){
-    function st_product_in_category($attr,$content = null)
+if(!function_exists('st_home_product_category')){
+    function st_home_product_category($attr,$content = null)
     {
         $attr = shortcode_atts([
-            'cat_id' => '',
-            'limit' => '',
-            'banner_group' => '',
+            'category'     => '',
+            'limit'           => '',
+            'banner_position' => '',
         ], $attr);
-        return nt()->load_template('products/product-in-category', '', array('attr' => $attr));
+        return nt()->load_template('content/home/category', '', array('attr' => $attr));
     }
-    add_shortcode('st_product_in_category', 'st_product_in_category');
+    add_shortcode('st_home_product_category', 'st_home_product_category');
 }
 
-if(!function_exists('st_product_viewed')){
-    function st_product_viewed($attr,$content = null)
+if(!function_exists('st_home_hot_deal')){
+    function st_home_hot_deal($attr,$content = null)
     {
         $attr = shortcode_atts([
-            'limit' => '',
+            'category'  => '',
+            'limit'     => '',
+            'end_date'  => ''
         ], $attr);
-        return nt()->load_template('products/product-viewed', '', array('attr' => $attr));
+        return nt()->load_template('content/home/hot-deal', '', array('attr' => $attr));
     }
-    add_shortcode('st_product_viewed', 'st_product_viewed');
+    add_shortcode('st_home_hot_deal', 'st_home_hot_deal');
 }
 
-if(!function_exists('st_news_and_video')){
-    function st_news_and_video($attr,$content = null)
+if(!function_exists('st_home_florist_youtube')){
+    function st_home_florist_youtube($attr,$content = null)
     {
         $attr = shortcode_atts([
-            'limit' => '',
-            'ids' => '',
-            'video_ids' => '',
+            'category'  => '',
+            'limit'     => '',
         ], $attr);
-        return nt()->load_template('content/news-video/list-news', '', array('attr' => $attr));
+        return nt()->load_template('content/home/florist-youtube', '', array('attr' => $attr));
     }
-    add_shortcode('st_news_and_video', 'st_news_and_video');
+    add_shortcode('st_home_florist_youtube', 'st_home_florist_youtube');
 }
-
-if(!function_exists('st_abc')){
-    function st_abc($attr,$content = null)
-    {
-        $attr = shortcode_atts([
-            'limit' => '',
-            'ids' => '',
-        ], $attr);
-        return nt()->load_template('content/news-video/list-news', '', array('attr' => $attr));
-    }
-    add_shortcode('st_abc', 'st_abc');
-}
-
-if(!function_exists('st_single_image')){
-    function st_single_image($attr,$content = null)
-    {
-        $attr = shortcode_atts([
-            'image' => '',
-            'link_to' => '',
-        ], $attr);
-        return nt()->load_template('content/single', 'image', array('attr' => $attr));
-    }
-    add_shortcode('st_single_image', 'st_single_image');
-}
-

@@ -3,6 +3,7 @@
     outline: none;
 }
 
+.product-item,
 .product-item .img,
 .product-item .img:focus,
 .product-item .img:hover {

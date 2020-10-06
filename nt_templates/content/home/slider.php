@@ -7,14 +7,14 @@
  */
 $args = [
     'post_type' => 'banner',
-    'posts_per_page' => $limit,
+    'posts_per_page' => $attr['limit'],
     'orderby' => 'menu_order',
     'order' => 'ASC',
     'tax_query' => array(
         array(
             'taxonomy' => 'banner_group',
             'field' => 'term_id',
-            'terms' => $banner_group, /// Where term_id of Term 1 is "1".
+            'terms' => $attr['banner_group_id'], /// Where term_id of Term 1 is "1".
             'include_children' => false
         ),
     )
@@ -23,42 +23,19 @@ $banners = new WP_Query($args);
 
 ?>
 
-
-<div class="h-slide">
-    <div id="carousel-1" class="owl-carousel owl-theme">
-        <?php while ($banners->have_posts()) : $banners->the_post() ?>
-            <?php $link_to = get_post_meta(get_the_ID(), 'link_to', true); ?>
-            <a href="<?= ($link_to && $link_to['url']) ? $link_to['url'] : '' ?>" target="<?= ($link_to && $link_to['target']) ? $link_to['target'] : '' ?>">
-                <img src="<?= get_the_post_thumbnail_url(get_the_ID(),array(673,292)) ?>" alt="banner">
-            </a>
-        <?php endwhile; ?>
-    </div>
-    <div id="carousel-2" class="owl-carousel owl-theme">
-        <?php while ($banners->have_posts()) : $banners->the_post() ?>
-            <div class="item">
-                <span><?= the_title() ?></span>
-            </div>
-        <?php endwhile; ?>
-    </div>
-</div>
-
+<?php if($banners->have_posts()) : ?>
     <div class="slider-hompage">
-		<div class="slider-pc">
-			<div class="item">
-				<img src="assets/img/slide.png" title="">
-				<div class="content">
-					<h2>florist vietnam</h2>
-					<p>Chuyên về “Giống” & các sản phẩm cây trồng có giá trị kinh tế cao</p>
-					<a href="" title="" class="btn-cc">Tìm hiểu ngay</a>
-				</div>
-			</div>
-			<div class="item">
-				<img src="assets/img/slide.png" alt="">
-				<div class="content">
-					<h2>florist vietnam</h2>
-					<p>Chuyên về “Giống” & các sản phẩm cây trồng có giá trị kinh tế cao</p>
-					<a href="" title="" class="btn-cc">Tìm hiểu ngay</a>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="slider-pc">
+            <?php while ($banners->have_posts()) : $banners->the_post(); ?>
+                <div class="item">
+                    <img src="<?= get_the_post_thumbnail_url(get_the_ID(), array()) ?>" title="<?= the_title() ?>">
+                    <div class="content">
+                        <h2><?= the_title() ?></h2>
+                        <div><?= the_excerpt() ?></div>
+                        <a href="<?= get_post_meta(get_the_ID(), 'banner_link')[0] ?>" title="<?= the_title() ?>" class="btn-cc"><?= __('Tìm hiểu ngay', TEXTDOMAIN) ?></a>
+                    </div>
+                </div>
+            <?php endwhile; ?>
+        </div>
+    </div>
+<?php endif; ?>

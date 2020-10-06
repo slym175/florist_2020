@@ -29,10 +29,7 @@ else : ?>
                             <div class="info">
                                 <div class="list-action">
                                     <ul class="login">
-                                        <li><a href="" title=""> <span> <img src="<?= THEME_URL_URI . '/assets/img/dn.png' ?>" alt=""> </span> Đăng
-                                                nhập </a> </li>
-                                        <li><a href="" title="" class="gh"> <img src="<?= THEME_URL_URI . '/assets/img/gh.png' ?>" alt=""><span> 0
-                                                </span> </a> </li>
+                                        <?php get_template_part('template_parts/menu/menu', 'header') ?>
                                         <li>
                                             <div class="img">
                                                 <img src="<?= THEME_URL_URI . '/assets/img/vn.png' ?>" alt="">
@@ -64,33 +61,7 @@ else : ?>
                         </div>
                     </div>
                 </div>
-                <div class="header-menu">
-                    <div class="container">
-                        <div class="row">
-                            <ul class="menu-pc">
-                                <li class="active"> <a href="" title=""> trang chủ </a> </li>
-                                <li class=""> <a href="" title=""> SẢN PHẨM </a>
-                                    <ul class="menu-pc-con">
-                                        <li> <a href="" title="">QUÀ TẶNG</a> </li>
-                                        <li><a href="" title="">QUÀ TẶNG </a></li>
-                                        <li><a href="" title="">QUÀ TẶNG</a> </li>
-                                    </ul>
-                                </li>
-                                <li class=""> <a href="" title=""> HOT DEAL </a> </li>
-                                <li class=""> <a href="" title=""> QUÀ TẶNG </a> </li>
-                                <li class=""> <a href="" title=""> KINH NGHIỆM </a> </li>
-                                <li class=""> <a href="" title=""> ĐI & VIẾT </a> </li>
-                                <li class=""> <a href="" title=""> VỀ FLORIST VIETNAM </a>
-                                    <ul class="menu-pc-con">
-                                        <li> <a href="" title="">QUÀ TẶNG</a> </li>
-                                        <li><a href="" title="">QUÀ TẶNG </a></li>
-                                        <li><a href="" title="">QUÀ TẶNG</a> </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <?php get_template_part('template_parts/menu/menu', 'primary') ?>
             </div>
             <div class="header-mb">
                 <div class="logo-mb">
