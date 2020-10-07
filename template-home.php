@@ -8,19 +8,11 @@
  * Template Name: Home
  */
 
-if (wp_is_mobile()) {
-    get_header('mobile');
-    if (have_posts()) {
-        the_post();
-        the_content();
-    }
-    get_footer('mobile');
-} else {
-    get_header('');
+get_header('');
 
-    if (have_posts()) {
-        the_post();
-        the_content();
-    }
-    get_footer();
+if (have_posts()) {
+    the_post();
+    the_content();
 }
+    
+get_footer();

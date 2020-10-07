@@ -82,3 +82,15 @@ if(!function_exists('st_home_florist_youtube')){
     }
     add_shortcode('st_home_florist_youtube', 'st_home_florist_youtube');
 }
+
+if(!function_exists('st_home_florist_news')){
+    function st_home_florist_news($attr,$content = null)
+    {
+        $attr = shortcode_atts([
+            'category'  => '',
+            'limit'     => '',
+        ], $attr);
+        return nt()->load_template('content/home/florist-news', '', array('attr' => $attr));
+    }
+    add_shortcode('st_home_florist_news', 'st_home_florist_news');
+}

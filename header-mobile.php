@@ -25,28 +25,28 @@
 						<div class="info">
 							<div class="list-action">
 								<ul class="login">
-									<li><a href="" title=""> <span> <img src="<?= THEME_URL_URI . '/assets/img/dn.png' ?>" alt=""> </span> Đăng
+									<li><a href="" title=""> <span> <img src="<?= THEME_URL_URI ?>/assets/img/dn.png" alt=""> </span> Đăng
 											nhập </a> </li>
-									<li><a href="" title="" class="gh"> <img src="<?= THEME_URL_URI . '/assets/img/gh.png' ?>" alt=""><span> 0
+									<li><a href="" title="" class="gh"> <img src="<?= THEME_URL_URI ?>/assets/img/gh.png" alt=""><span> 0
 											</span> </a> </li>
 									<li>
 										<div class="img">
-											<img src="<?= THEME_URL_URI . '/assets/img/vn.png' ?>" alt="">
-											<img src="<?= THEME_URL_URI . '/assets/img/vn.png' ?>" alt="" class="english">
+											<img src="<?= THEME_URL_URI ?>/assets/img/vn.png" alt="">
+											<img src="<?= THEME_URL_URI ?>/assets/img/vn.png" alt="" class="english">
 										</div>
 										<span class="select-item">
 											<select>
 												<option> vi </option>
 												<option> en </option>
 											</select>
-											<img src="./<?= THEME_URL_URI . '/assets/img/select.png' ?>" alt="">
+											<img src="<?= THEME_URL_URI ?>/assets/img/select.png" alt="">
 										</span>
 									</li>
 								</ul>
 							</div>
 							<div class="search-form">
 								<div class="hotline">
-									<span> <img src="<?= THEME_URL_URI . '/assets/img/hotline.png' ?>" alt=""> </span>
+									<span> <img src="<?= THEME_URL_URI ?>/assets/img/hotline.png" alt=""> </span>
 									<span>
 										<p>Hotline:</p>
 										<a href="" title=""><strong>0818 596 696</strong></a>
@@ -78,7 +78,7 @@
 		</div>
 		<div class="header-mb">
 			<div class="logo-mb">
-				<a href="" title=""> <img src="<?= THEME_URL_URI . '/assets/img/logo.png' ?>" alt=""> </a>
+				<a href="" title=""> <img src="<?= THEME_URL_URI ?>/assets/img/logo.png" alt=""> </a>
 			</div>
 			<div class="right-logo-box">
 				<div class="bottom-mb">
@@ -86,13 +86,13 @@
 						<div class="form-search">
 							<form>
 								<input type="text" name="" placeholder="Nhập từ tìm kiếm...">
-								<a href="" class="btn btn-search" title=""> <img src="<?= THEME_URL_URI . '/assets/img/search.png' ?>" alt="">
+								<a href="" class="btn btn-search" title=""> <img src="<?= THEME_URL_URI ?>/assets/img/search.png" alt="">
 								</a>
 							</form>
 						</div>
 					</div>
 					<div class="humberger-menu">
-						<img src="<?= THEME_URL_URI . '/assets/img/humberger.png' ?>" alt="">
+						<img src="<?= THEME_URL_URI ?>/assets/img/humberger.png" alt="">
 					</div>
 
 				</div>
@@ -102,11 +102,11 @@
 					<div class="block-mb one">
 						<div class="block-item">
 							<div class="icon">
-								<img src="<?= THEME_URL_URI . '/assets/img/102.png' ?>" alt="">
+								<img src="<?= THEME_URL_URI ?>/assets/img/102.png" alt="">
 							</div>
 							<div class="block-title">
 								<a href="javascript:;" title=""> Sản phẩm </a>
-								<img src="<?= THEME_URL_URI . '/assets/img/109.png' ?>" alt="" class="hover">
+								<img src="<?= THEME_URL_URI ?>/assets/img/109.png" alt="" class="hover">
 							</div>
 							<div class="block-text">
 								<ul>
@@ -117,7 +117,7 @@
 						</div>
 						<div class="block-item">
 							<div class="icon">
-								<img src="<?= THEME_URL_URI . '/assets/img/106.png' ?>" alt="">
+								<img src="<?= THEME_URL_URI ?>/assets/img/106.png" alt="">
 							</div>
 							<div class="block-title">
 								<a href="" title="">Quà tặng</a>
@@ -125,7 +125,7 @@
 						</div>
 						<div class="block-item">
 							<div class="icon">
-								<img src="<?= THEME_URL_URI . '/assets/img/105.png' ?>" alt="">
+								<img src="<?= THEME_URL_URI ?>/assets/img/105.png" alt="">
 							</div>
 							<div class="block-title">
 								<a href="" title="">Hot Deal</a>
@@ -133,7 +133,7 @@
 						</div>
 						<div class="block-item">
 							<div class="icon">
-								<img src="<?= THEME_URL_URI . '/assets/img/103.png' ?>" alt="">
+								<img src="<?= THEME_URL_URI ?>/assets/img/103.png" alt="">
 							</div>
 							<div class="block-title">
 								<a href="" title="">Kinh nghiệm</a>
@@ -141,7 +141,7 @@
 						</div>
 						<div class="block-item">
 							<div class="icon">
-								<img src="<?= THEME_URL_URI . '/assets/img/107.png' ?>" alt="">
+								<img src="<?= THEME_URL_URI ?>/assets/img/107.png" alt="">
 							</div>
 							<div class="block-title">
 								<a href="" title="">Đi & viết</a>
@@ -149,11 +149,11 @@
 						</div>
 						<div class="block-item">
 							<div class="icon">
-								<img src="<?= THEME_URL_URI . '/assets/img/101.png' ?>" alt="">
+								<img src="<?= THEME_URL_URI ?>/assets/img/101.png" alt="">
 							</div>
 							<div class="block-title">
 								<a href="javascript:;" title="">Về Florist Việt Nam</a>
-								<img src="<?= THEME_URL_URI . '/assets/img/109.png' ?>" alt="" class="hover">
+								<img src="<?= THEME_URL_URI ?>/assets/img/109.png" alt="" class="hover">
 							</div>
 							<div class="block-text">
 								<ul>
@@ -168,24 +168,24 @@
 						</div>
 						<div class="block-item">
 							<div class="icon">
-								<img src="<?= THEME_URL_URI . '/assets/img/108.png' ?>" alt="">
+								<img src="<?= THEME_URL_URI ?>/assets/img/108.png" alt="">
 							</div>
 							<div class="block-title">
 								<a href="" title="">Ngôn ngữ</a>
-								<img src="<?= THEME_URL_URI . '/assets/img/109.png' ?>" alt="" class="hover">
+								<img src="<?= THEME_URL_URI ?>/assets/img/109.png" alt="" class="hover">
 							</div>
 							<div class="block-text">
 								<ul>
-									<li><a href="" title="">Tiếng Việt <img src="<?= THEME_URL_URI . '/assets/img/vietnam.png' ?>" alt=""></a>
+									<li><a href="" title="">Tiếng Việt <img src="<?= THEME_URL_URI ?>/assets/img/vietnam.png" alt=""></a>
 									</li>
-									<li><a href="" title="">Tiếng Anh <img src="<?= THEME_URL_URI . '/assets/img/anh.png' ?>" alt=""></a> </a>
+									<li><a href="" title="">Tiếng Anh <img src="<?= THEME_URL_URI ?>/assets/img/anh.png" alt=""></a> </a>
 									</li>
 								</ul>
 							</div>
 						</div>
 						<div class="block-item">
 							<div class="icon">
-								<img src="<?= THEME_URL_URI . '/assets/img/104.png' ?>" alt="">
+								<img src="<?= THEME_URL_URI ?>/assets/img/104.png" alt="">
 							</div>
 							<div class="block-title">
 								<a href="" title="">Đăng nhập</a>
@@ -193,12 +193,12 @@
 						</div>
 						<div class="block-item">
 							<div class="close-mb">
-								<img src="<?= THEME_URL_URI . '/assets/img/110.png' ?>" alt="">
+								<img src="<?= THEME_URL_URI ?>/assets/img/110.png" alt="">
 							</div>
 						</div>
 						<div class="block-item block-item-hotline">
 							<div class="hl-mb">
-								<img src="<?= THEME_URL_URI . '/assets/img/111.png' ?>" alt="">
+								<img src="<?= THEME_URL_URI ?>/assets/img/111.png" alt="">
 								<p>HOTLINE: <strong> <a href="" title="">0369 745 858</a></strong></p>
 							</div>
 						</div>

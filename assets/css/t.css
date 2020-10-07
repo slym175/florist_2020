@@ -21,3 +21,11 @@
     outline: none;
     box-shadow: none;
 }
+
+.product-grid-list {
+    width: 100%;
+}
+
+.woocommerce-Price-amount.amount span{
+    margin-left: 0 !important;
+}

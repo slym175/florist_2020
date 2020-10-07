@@ -5,9 +5,8 @@
  * User: trungduc
  * Date: 6/17/2020
  * Time: 11:03 AM
- * Template Name: Register
+ * Template Name: Gift
  */
-
 get_header('');
 
 if (have_posts()) {

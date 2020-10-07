@@ -37,81 +37,15 @@ if (!defined('ABSPATH')) {
      */
     //    do_action( 'woocommerce_single_product_summary' );
     ?>
-    <section class="container breadcrumb-section">
-        <div class="row font-14">
-            <div class="col-12 p-0">
-                <?php
-                $args = array(
-                    'delimiter' => '',
-                    'home' => '',
-                    'wrap_before' => '<ol class="breadcrumb breadcrumb-left p-0 m-0">',
-                    'wrap_after' => '</ol>',
-                    'before' => '<li class="breadcrumb-item">',
-                    'after' => '</li>',
-                );
-                ?>
 
-                <?php woocommerce_breadcrumb($args); ?>
+    <?= nt()->load_template('layouts/main-breadcrumb', '', []) ?>
+
+    <div class="detail-product-page">
+        <div class="container">
+            <div class="row">
+                <?php wc_get_template( 'single-product/product-detail.php' ); ?>
+                <?php wc_get_template( 'single-product/product-content.php' ); ?>
             </div>
         </div>
-    </section>
-
-    <?php wc_get_template( 'single-product/product-title.php' ); ?>
-
-    <section class="container border-bottom py-md-4 product-details px-0">
-        <div class="row">
-
-            <?php wc_get_template('single-product/product-slide.php') ?>
-
-            <?php wc_get_template('single-product/product-variation.php') ?>
-
-            <div class="col-lg-3 mt-lg-0 mt-2">
-                <div class="policy_intuitive">
-                    <div class="for-mobile">
-                        <h4 class="text-green-1">Mua như vua - chăm sóc như vip</h4>
-                        <ul class="policy_new">
-                            <li>
-                                <span>
-                                    <i class="icondetailV3-ld-new">
-
-                                    </i>
-                                </span>
-                                <p><b>Miễn phí</b> công lắp đặt</p>
-                            </li>
-                            <li>
-                                <span>
-                                    <i class="icondetailV3-1d1-new">
-
-                                    </i>
-                                </span>
-                                <p>Lỗi là đổi mới trong <b>1 tháng</b> tận nhà <a href="#" title="Chính sách đổi trả"> <b data-tooltip-stickto="top" data-tooltip-maxwidth="300" data-tooltip="Trong tháng đầu tiên, nếu sản phẩm lỗi do nhà sản xuất, quý khách sẽ được đổi sản phẩm tương đương (cùng model, cùng màu, …) miễn phí."> Xem chi tiết </b> </a>
-                                </p>
-                            </li>
-                            <li>
-                                <span>
-                                    <i class="icondetailV3-dt-new">
-
-                                    </i>
-                                </span>
-                                <p>Đổi trả và bảo hành cực dễ <b>chỉ cần số điện thoại</b></p>
-                            </li>
-                            <li>
-                                <span>
-                                    <i class="icondetailV3-bh-new"></i>
-                                </span>
-                                <p>Bảo hành <b>chính hãng 2 năm</b>, có người đến lấy tận nhà</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Sản phẩm liên quan -->
-    <?php wc_get_template('single-product/product-related.php') ?>
-
-    <!-- Chi tiết sản phẩm -->
-    <?php wc_get_template('single-product/product-detail.php') ?>
+    </div>
 </main>

@@ -7,6 +7,13 @@
  * Time: 11:03 AM
  * Template Name: Login
  */
-?>
 
-<h1>Login</h1>
+get_header('');
+
+if (have_posts()) {
+    the_post();
+    the_content();
+}
+    
+get_footer();
+?>

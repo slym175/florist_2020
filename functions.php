@@ -23,7 +23,9 @@ require_once THEME_URL . '/inc/helper/woocommerce.php';
 require_once THEME_URL . '/inc/helper/cla_woocommerce.php';
 require_once THEME_URL . '/inc/helper/ajax.php';
 require_once THEME_URL . '/inc/layouts/comments.php';
-require_once THEME_URL . '/inc/woocommerce.php';
+require_once THEME_URL . '/inc/layouts/vc-elements/vc_map_custom_types.php';
+require_once THEME_URL . '/inc/florist.php';
+require_once THEME_URL . '/widget/info_footer_widget.php';
 require_once THEME_URL . '/inc/florist.php';
 if (!function_exists('florist_setup')) {
     function florist_setup()
@@ -82,12 +84,21 @@ if (!function_exists('florist_setup')) {
 
         /* Tạo sidebar */
         $side_bar = array(
-            'name' => __('Main Sidebar', 'florist'),
+            'name' => __('Main Sidebar', TEXTDOMAIN),
             'id' => 'main-sidebar',
             'description' => __('Description Sidebar', TEXTDOMAIN),
             'class' => 'main-sidebar',
         );
         register_sidebar($side_bar);
+
+        /* Tạo sidebar */
+        $info_footer_sidebar = array(
+            'name' => __('Page Info Footer Sidebar', TEXTDOMAIN),
+            'id' => 'info-footer-sidebar',
+            'description' => __('Page Infomation (Address,Phone, Mail, Social Link, ...)', TEXTDOMAIN),
+            'class' => 'info-footer-sidebar',
+        );
+        register_sidebar($info_footer_sidebar);
 
         /* Tạo sidebar */
         $side_bar_page = array(
@@ -141,18 +152,18 @@ if (!function_exists('florist_setup')) {
 
     add_action('customize_register', 'carrental_customize_register');
 
-    // function carrental_customize_register_mobile($wp_customize_mobile)
-    // {
-    //     $wp_customize_mobile->add_setting('logo_mobile'); // Thêm cài đặt cho trình tải lên logo
+     function carrental_customize_register_mobile($wp_customize_mobile)
+     {
+         $wp_customize_mobile->add_setting('logo_footer'); // Thêm cài đặt cho trình tải lên logo
 
-    //     $wp_customize_mobile->add_control(new WP_Customize_Image_Control($wp_customize_mobile, 'logo_mobile', array(
-    //         'label' => __('Upload Logo Mobile(replaces text)', TEXTDOMAIN),
-    //         'section' => 'title_tagline',
-    //         'settings' => 'logo_mobile',
-    //     )));
-    // }
+         $wp_customize_mobile->add_control(new WP_Customize_Image_Control($wp_customize_mobile, 'logo_footer', array(
+             'label' => __('Upload Logo Footer(replaces text)', TEXTDOMAIN),
+             'section' => 'title_tagline',
+             'settings' => 'logo_footer',
+         )));
+     }
 
-    // add_action('customize_register', 'carrental_customize_register_mobile');
+     add_action('customize_register', 'carrental_customize_register_mobile');
 }
 
 add_action('use_block_editor_for_post', '__return_false');
@@ -162,6 +173,13 @@ function florist_woocommerce_pagination()
 {
     woocommerce_pagination();
 }
+
+//Widget register
+function florist_register_widget() {
+    register_widget( 'InfoFooterWidget' );
+}
+
+add_action( 'widgets_init', 'florist_register_widget' );
 
 //Thêm file js,css
 function loadstyle()

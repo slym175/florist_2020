@@ -15,26 +15,9 @@
 				<div class="row">
 					<div class="col-md-4 footer-1">
 						<div class="logo-footer">
-							<a href="" title=""> <img src="<?= THEME_URL_URI . '/assets/img/logot.png' ?>" alt=""> </a>
+							<a href="<?= home_url() ?>" title=""> <img src="<?= get_theme_mod('logo_footer') ? get_theme_mod('logo_footer') : THEME_URL_URI ?>/assets/img/logot.png" alt=""> </a>
 						</div>
-						<ul class="list-dc">
-							<li> <span> <img src="<?= THEME_URL_URI . '/assets/img/dc.png' ?>" alt=""></span>
-								<p>61A, Khu nhà phố Thủy Nguyên, KĐT Ecopark, Văn Giang, Hưng Yên</p>
-							</li>
-							<li> <span> <img src="<?= THEME_URL_URI . '/assets/img/phone.png' ?>" alt=""></span>
-								<p>0963 596 696</p>
-							</li>
-							<li> <span> <img src="<?= THEME_URL_URI . '/assets/img/mail.png' ?>" alt=""></span>
-								<p>floristviet@gmail.com</p>
-							</li>
-							<li>
-								<a href="" title=""> <img src="<?= THEME_URL_URI . '/assets/img/face.png' ?>" alt=""></a>
-								<a href="" title=""> <img src="<?= THEME_URL_URI . '/assets/img/ins.png' ?>" alt=""></a>
-								<a href="" title=""> <img src="<?= THEME_URL_URI . '/assets/img/icon3.png' ?>" alt=""></a>
-								<a href="" title=""> <img src="<?= THEME_URL_URI . '/assets/img/icon4.png' ?>" alt=""></a>
-								<a href="" title=""> <img src="<?= THEME_URL_URI . '/assets/img/icon5.png' ?>" alt=""></a>
-							</li>
-						</ul>
+                        <?php get_sidebar('footer-info') ?>
 					</div>
 					<?php get_template_part('template_parts/menu/menu', 'footer', array('menu_name' => 'footer-menu-left','class' => 'col-md-3 footer-default')); ?>
 					<?php get_template_part('template_parts/menu/menu', 'footer', array('menu_name' => 'footer-menu-right','class' => 'col-md-2 footer-default')); ?>
@@ -45,7 +28,7 @@
 						<form class="form-footer">
 							<span>
 								<input type="" name="" placeholder="Nhập email của bạn...">
-								<a href="" title=""> <img src="<?= THEME_URL_URI . '/assets/img/gui.png' ?>" alt=""> </a>
+								<a href="" title=""> <img src="<?= THEME_URL_URI ?>/assets/img/gui.png" alt=""> </a>
 							</span>
 						</form>
 					</div>
@@ -57,18 +40,18 @@
 		</div>
 	</footer>
 
-	<a href="#" class="icon-link backtotop" title=""> <img src="<?= THEME_URL_URI . '/assets/img/top.png' ?>" alt=""> </a>
-	<a href="" class="icon-link icon-1" title=""> <img src="<?= THEME_URL_URI . '/assets/img/i1.png' ?>" alt=""> </a>
-	<a href="" class="icon-link icon-2" title=""> <img src="<?= THEME_URL_URI . '/assets/img/i2.png' ?>" alt=""> </a>
-	<a href="" class="icon-link icon-3" title=""> <img src="<?= THEME_URL_URI . '/assets/img/i3.png' ?>" alt=""> </a>
-	<a href="" class="icon-link icon-4" title=""> <img src="<?= THEME_URL_URI . '/assets/img/i4.png' ?>" alt=""> </a>
+	<a href="#" class="icon-link backtotop" title=""> <img src="<?= THEME_URL_URI ?>/assets/img/top.png" alt=""> </a>
+	<a href="" class="icon-link icon-1" title=""> <img src="<?= THEME_URL_URI ?>/assets/img/i1.png" alt=""> </a>
+	<a href="" class="icon-link icon-2" title=""> <img src="<?= THEME_URL_URI ?>/assets/img/i2.png" alt=""> </a>
+	<a href="" class="icon-link icon-3" title=""> <img src="<?= THEME_URL_URI ?>/assets/img/i3.png" alt=""> </a>
+	<a href="" class="icon-link icon-4" title=""> <img src="<?= THEME_URL_URI ?>/assets/img/i4.png" alt=""> </a>
 
 	<div class="icon-box-mb">
-		<a href="" class="icon-mb" title=""> <img src="<?= THEME_URL_URI . '/assets/img/i1.png' ?>" alt=""> </a>
-		<a href="" class="icon-mb" title=""> <img src="<?= THEME_URL_URI . '/assets/img/i2.png' ?>" alt=""> </a>
-		<a href="" class="icon-mb" title=""> <img src="<?= THEME_URL_URI . '/assets/img/i3.png' ?>" alt=""> </a>
-		<a href="" class="icon-mb" title=""> <img src="<?= THEME_URL_URI . '/assets/img/i4.png' ?>" alt=""> </a>
-		<a href="#" class="icon-mb backtotop" title=""> <img src="<?= THEME_URL_URI . '/assets/img/top.png' ?>" alt=""> </a>
+		<a href="" class="icon-mb" title=""> <img src="<?= THEME_URL_URI ?>/assets/img/i1.png" alt=""> </a>
+		<a href="" class="icon-mb" title=""> <img src="<?= THEME_URL_URI ?>/assets/img/i2.png" alt=""> </a>
+		<a href="" class="icon-mb" title=""> <img src="<?= THEME_URL_URI ?>/assets/img/i3.png" alt=""> </a>
+		<a href="" class="icon-mb" title=""> <img src="<?= THEME_URL_URI ?>/assets/img/i4.png" alt=""> </a>
+		<a href="#" class="icon-mb backtotop" title=""> <img src="<?= THEME_URL_URI ?>/assets/img/top.png" alt=""> </a>
     </div>
     
     <?php wp_footer() ?>

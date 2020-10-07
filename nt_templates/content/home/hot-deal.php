@@ -26,7 +26,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="title-default">
-					<h2><span><img src="<?= $thumb ?>" alt="$cat->name"><?= $cat->name ?><img src="./assets/img/la.png"
+					<h2><span><img src="<?= $thumb ?>" alt="$cat->name"><?= $cat->name ?><img src="<?= THEME_URL_URI ?>/assets/img/la.png"
 								alt=""></span></h2>
 					<p class="description"><?= $cat->description ?></p>
 				</div>

@@ -29,8 +29,8 @@ jQuery(function () {
     dots: false,
     fade: true,
     asNavFor: '.video-item-nav',
-    prevArrow: "<button class='prev slick-prev'><img class='left-arrow ' src='wp-content/themes/florist/assets/img/left.png' alt=''></button>",
-    nextArrow: "<button class='next slick-next'><img class='right-arrow ' src='wp-content/themes/florist/assets/img/right.png' alt=''></button>",
+    prevArrow: "<button class='prev slick-prev'><img class='left-arrow ' src='/wordpress/wp-content/themes/florist/assets/img/left.png' alt=''></button>",
+    nextArrow: "<button class='next slick-next'><img class='right-arrow ' src='/wordpress/wp-content/themes/florist/assets/img/right.png' alt=''></button>",
 
   });
   jQuery('.video-item-nav').slick({
@@ -57,8 +57,8 @@ jQuery(function () {
     dots: false,
     fade: true,
     asNavFor: '.cate-nav',
-    prevArrow: "<button class='prev slick-prev'><img class='left-arrow ' src='wp-content/themes/florist/assets/img/left.png' alt=''></button>",
-    nextArrow: "<button class='next slick-next'><img class='right-arrow ' src='wp-content/themes/florist/assets/img/right.png' alt=''></button>",
+    prevArrow: "<button class='prev slick-prev'><img class='left-arrow ' src='/wordpress/wp-content/themes/florist/assets/img/left.png' alt=''></button>",
+    nextArrow: "<button class='next slick-next'><img class='right-arrow ' src='/wordpress/wp-content/themes/florist/assets/img/right.png' alt=''></button>",
 
   });
   jQuery('.cate-nav').slick({
@@ -99,8 +99,8 @@ jQuery(function () {
     dots: false,
     fade: true,
     asNavFor: '.images-nav',
-    prevArrow: "<button class='prev slick-prev'><img class='left-arrow ' src='wp-content/themes/florist/assets/img/left.png' alt=''></button>",
-    nextArrow: "<button class='next slick-next'><img class='right-arrow ' src='wp-content/themes/florist/assets/img/right.png' alt=''></button>",
+    prevArrow: "<button class='prev slick-prev'><img class='left-arrow ' src='/wordpress/wp-content/themes/florist/assets/img/left.png' alt=''></button>",
+    nextArrow: "<button class='next slick-next'><img class='right-arrow ' src='/wordpress/wp-content/themes/florist/assets/img/right.png' alt=''></button>",
 
   });
   jQuery('.images-nav').slick({
@@ -190,8 +190,8 @@ jQuery(function () {
     dots: true,
     slidesToShow: 1,
     /*  autoplay: true,*/
-    prevArrow: "<button class='prev slick-prev'><img class='left-arrow ' src='wp-content/themes/florist/assets/img/left.png' alt=''></button>",
-    nextArrow: "<button class='next slick-next'><img class='right-arrow ' src='wp-content/themes/florist/assets/img/right.png' alt=''></button>",
+    prevArrow: "<button class='prev slick-prev'><img class='left-arrow ' src='/wordpress/wp-content/themes/florist/assets/img/left.png' alt=''></button>",
+    nextArrow: "<button class='next slick-next'><img class='right-arrow ' src='/wordpress/wp-content/themes/florist/assets/img/right.png' alt=''></button>",
     responsive: [{
       breakpoint: 768,
       settings: {
@@ -243,6 +243,51 @@ jQuery(function () {
         }
       });
     }
+  });
+  jQuery('.box-preview').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    asNavFor: '.box-flex',
+    prevArrow: "<button class='prev slick-prev'><img class='left-arrow ' src='/wordpress/wp-content/themes/florist/assets/img/left.png' alt=''></button>",
+    nextArrow: "<button class='next slick-next'><img class='right-arrow ' src='/wordpress/wp-content/themes/florist/assets/img/right.png' alt=''></button>",
+  });
+  jQuery('.box-flex').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: '.box-preview',
+    dots: false,
+    centerMode: true,
+    focusOnSelect: true
+  });
+  jQuery(".box-preview").on('click', '.box-img-preview', function () {
+    var dataSilde = jQuery(this).attr('data-slide');
+    if (dataSilde == undefined) {
+      return false;
+    }
+    var elm = '.main-overlay-slick[data-name=' + dataSilde + ']';
+    jQuery(elm).addClass('active')
+    jQuery(".box-overlay").removeClass('hide');
+    jQuery(".box-overlay .icon-close-overlay").attr('data-slide', dataSilde);
+    setTimeout(function () {
+      setSlick(elm);
+      jQuery(".box-overlay").animate({
+        'opacity': '1'
+      });
+    }, 50)
+  });
+  jQuery(".box-overlay .icon-close-overlay").click(function () {
+    var dataSilde = jQuery(this).attr('data-slide');
+    if (dataSilde == undefined) {
+      return false;
+    }
+    var elm = '.main-overlay-slick[data-name=' + dataSilde + ']';
+    jQuery(elm).removeClass('active')
+    unSlick(elm);
+    jQuery(".box-overlay").addClass('hide').css({
+      'opacity': ''
+    });
   });
 });
 
@@ -296,34 +341,7 @@ jQuery(function () {
   // jQuery(".box-preview").find(".box-img-preview").removeClass('show');
   // jQuery(".box-preview").find("#" + idElm).addClass('show');
 });*/
-jQuery(".box-preview").on('click', '.box-img-preview', function () {
-  var dataSilde = jQuery(this).attr('data-slide');
-  if (dataSilde == undefined) {
-    return false;
-  }
-  var elm = '.main-overlay-slick[data-name=' + dataSilde + ']';
-  jQuery(elm).addClass('active')
-  jQuery(".box-overlay").removeClass('hide');
-  jQuery(".box-overlay .icon-close-overlay").attr('data-slide', dataSilde);
-  setTimeout(function () {
-    setSlick(elm);
-    jQuery(".box-overlay").animate({
-      'opacity': '1'
-    });
-  }, 50)
-})
-jQuery(".box-overlay .icon-close-overlay").click(function () {
-  var dataSilde = jQuery(this).attr('data-slide');
-  if (dataSilde == undefined) {
-    return false;
-  }
-  var elm = '.main-overlay-slick[data-name=' + dataSilde + ']';
-  jQuery(elm).removeClass('active')
-  unSlick(elm);
-  jQuery(".box-overlay").addClass('hide').css({
-    'opacity': ''
-  });
-})
+
 jQuery(document).ready(function () {
   setSlick('.box-preview')
   setTimeout(function () {
@@ -345,21 +363,3 @@ function unSlick(elm) {
   //'.main-overlay-slick'
   jQuery(elm).slick('unslick')
 }
-
-jQuery('.box-preview').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: true,
-  fade: true,
-  asNavFor: '.box-flex',
-  prevArrow: "<button class='prev slick-prev'><img class='left-arrow ' src='wp-content/themes/florist/assets/img/left.png' alt=''></button>",
-  nextArrow: "<button class='next slick-next'><img class='right-arrow ' src='wp-content/themes/florist/assets/img/right.png' alt=''></button>",
-});
-jQuery('.box-flex').slick({
-  slidesToShow: 5,
-  slidesToScroll: 1,
-  asNavFor: '.box-preview',
-  dots: false,
-  centerMode: true,
-  focusOnSelect: true
-});

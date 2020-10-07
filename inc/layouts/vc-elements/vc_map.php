@@ -213,4 +213,32 @@ function loadVCMapNewLayout() {
             ],
         )
     ));
+
+    vc_map(array(
+        'name' => esc_html__('Home Florist News',TEXTDOMAIN),
+        'base' => 'st_home_florist_news',
+        'icon' => 'icon-st',
+        'category' => 'Florist',
+        'params' => array(
+            [
+                // 'type' => 'textfield',
+                // 'heading' => __('Category Id', TEXTDOMAIN),
+                // 'param_name' => 'banner_group_id',
+                // 'description' => 'Nhóm sản phẩm muốn hiển thị'
+                "type" => "dropdown_multi",
+                "holder" => "div",
+                "class" => "",
+                'heading' => __('Category', TEXTDOMAIN),
+                "param_name" => 'category',
+                "value" => $cat_array,
+                'description' => __('Nhóm tin tức muốn hiển thị (Có thể chọn nhiều)', TEXTDOMAIN),
+            ],
+            [
+                'type' => 'textfield',
+                'heading' => __('Limit', TEXTDOMAIN),
+                'param_name' => 'limit',
+                'description' => 'Giới hạn số lượng sản phẩm làm quà tặng được lấy ra.'
+            ],
+        )
+    ));
 }

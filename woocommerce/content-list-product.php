@@ -17,117 +17,63 @@
 
 defined('ABSPATH') || exit;
 get_header();
-global $wp_query;
+//global $wp_query;
+//
+//$link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+//$orderby = (isset($_GET['orderby']) && $_GET['orderby']) ? $_GET['orderby'] : '';
+$banner = get_the_post_thumbnail_url(238, array(1900, 350));
 
-$link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-$orderby = (isset($_GET['orderby']) && $_GET['orderby']) ? $_GET['orderby'] : '';
-$banner_sale = get_option('banner_sale');
+$params = array(
+    'post_type'     => 'product',
+    'post_per_page' => 12,
+    'order_by'      => array('date'),
+    'order'         => 'DESC'
+);
+
+$products = new WP_Query($params);
 
 ?>
 
-    <section class="container">
-        <div class="row">
-            <div class="col-12 p-0 my-3">
-                <?php
-                $args = array(
-                    'delimiter' => '',
-                    'home' => 'Trang chủ',
-                    'wrap_before' => '<ol class="breadcrumb breadcrumb-left p-0 m-0">',
-                    'wrap_after' => '</ol>',
-                    'before' => '<li class="breadcrumb-item">',
-                    'after' => '</li>',
-                );
-                ?>
+<main>
+    <div class="banner-page">
+        <img src="<?= $banner ?>" alt="">
+        <h2><?= __('Sản phẩm', TEXTDOMAIN) ?></h2>
+    </div>
 
-                <?php woocommerce_breadcrumb($args); ?>
-            </div>
-        </div>
-    </section>
+    <?= nt()->load_template('layouts/main-breadcrumb', '', []) ?>
 
-    <section class="container">
-        <div class="row main-reverse">
-            <div class="col-lg-9 col-12 p-0 pr-lg-3">
-                <div class="card order-card">
-                    <div class="card-header d-flex order-options">
-                        <span class="col-2 font-weight-bold ml-auto">Xếp theo:</span>
-                        <div class="col-10 d-flex justify-content-around align-items-center">
-                            <div class="c-radio-inline">
-                                <input type="radio" class="d-none orderby-product"
-                                       data-url="<?= add_query_arg('orderby', '', $link) ?>" data-sort="bc" id="radio1"
-                                       name="orderBy" <?= (!$orderby) ? 'checked' : '' ?>>
-                                <label class="c-radio-label" for="radio1">Bán chạy</label>
-                            </div>
-                            <div class="c-radio-inline">
-                                <input class="d-none orderby-product" type="radio" id="radio2" name="orderBy"
-                                       data-url="<?= add_query_arg('orderby', 'price-desc', $link) ?>" <?= ($orderby && $orderby == 'price-desc') ? 'checked' : '' ?>>
-                                <label class="c-radio-label" for="radio2">Giá cao đến thấp</label>
-                            </div>
-                            <div class="c-radio-inline">
-                                <input class="d-none orderby-product" type="radio" id="radio3" name="orderBy"
-                                       data-url="<?= add_query_arg('orderby', 'price', $link) ?>" <?= ($orderby && $orderby == 'price') ? 'checked' : '' ?>>
-                                <label class="c-radio-label" for="radio3">Giá thấp đến cao</label>
-                            </div>
-                            <div class="c-radio-inline">
-                                <input class="d-none orderby-product" type="radio" id="radio4" name="orderBy"
-                                       data-url="<?= add_query_arg('orderby', 'date', $link) ?>" <?= ($orderby && $orderby == 'date') ? 'checked' : '' ?>>
-                                <label class="c-radio-label" for="radio4">Mới - Cũ</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card-body p-0 d-flex flex-wrap list-product">
-                        <?php if (have_posts()): while (have_posts()) : the_post();
-                            global $product ?>
-                            <div class="col-lg-3 col-md-4 col-6 card p-0 product">
-                                <a href="<?= the_permalink() ?>">
-                                    <img class="card-img-top" src="<?= get_the_post_thumbnail_url() ?>"
-                                         alt="<?= the_title() ?>">
-                                </a>
-                                <span class="discount-status <?= ($product->get_sale_price()) ? '' : 'discount-status-none' ?>">
-                                <img class="img-fluid" src="<?= (isset($banner_sale) && $banner_sale) ? $banner_sale : THEME_URL_URI . '/assets/images/2606/Group 2106.png' ?>"
-                                     alt="Red Status">
-                            </span>
-                                <a href="<?= the_permalink() ?>"
-                                   class="product-name"><span><?= the_title() ?></span></a>
-                                <div class="card-body p-2">
-                                    <span class="text-danger product-price"><?= ($product->get_regular_price()) ? number_format(($product->get_sale_price()) ? $product->get_sale_price() : $product->get_regular_price()) . ' ' . get_woocommerce_currency_symbol() : 'Liên hệ' ?></span>
-                                    <div class="d-flex <?= ($product->get_sale_price()) ? '' : 'product-d-none' ?>">
-                                        <?php $sale = ($product->get_sale_price()) ? floor((1 - ($product->get_sale_price() / $product->get_regular_price())) * 100) : ''; ?>
-                                        <span class="product-d-price"><?= ($product->get_regular_price()) ? number_format($product->get_regular_price()) . ' ' . get_woocommerce_currency_symbol() : 'Liên h' ?></span>
-                                        <span class="product-d-discount ml-lg-3 ml-1 text-danger">(-<?= $sale ?>
-                                            %)</span>
+    <div class="list-products">
+        <div class="container">
+            <div class="row">
+                <div class="element-list">
+                    <?php if($products->have_posts()) : ?>
+                        <div class="list-products-item">
+                            <div class="product-grid product-grid-list">
+                                <?php while ($products->have_posts()) : $products->the_post(); global $product; ?>
+                                    <div class="col-md-4 col-sm-4 col-xs-12 item">
+                                        <?= nt()->load_template('layouts/product-item', '', ['product' => $product]) ?>
                                     </div>
-                                    <div class="d-flex">
-                                        <span class="product-star"><?= (float)$product->get_average_rating() ?>/5 <img
-                                                    src="<?= THEME_URL_URI . '/assets/images/star.svg' ?>"
-                                                    alt="star"></span>
-                                        <span class="product-cmt"><?= $product->get_rating_count() ?> đánh giá</span>
-                                    </div>
+                                <?php endwhile; ?>
+                            </div>
+                            <?php if($products->max_num_pages > 1) : ?>
+                                <div class="pagination-clean">
+                                    <ul>
+                                        <li class="active-pagination"> <a href="" title=""> 1 </a> </li>
+                                        <li class=""> <a href="" title=""> 2 </a> </li>
+                                        <li class=""> <a href="" title=""> 3 </a> </li>
+                                        <li class=""> <a href="" title=""> 4 </a> </li>
+                                        <li class="active-next"> <a href="" title=""> <img src="<?= THEME_URL_URI ?>/assets/img/pagination-icon.png" alt=""> </a> </li>
+                                    </ul>
                                 </div>
-                            </div>
-
-                        <?php endwhile; endif; ?>
-                        <?php wp_reset_query(); ?>
-                    </div>
-                </div>
-                <?php if ($wp_query->max_num_pages > 1) : ?>
-                    <div class="row mt-md-4 mt-2">
-                        <div class="col-12 text-center">
-                            <?php
-                            echo posts_navigation();
-                            ?>
+                            <?php endif; ?>
                         </div>
-                    </div>
-                <?php endif; ?>
+                    <?php endif; ?>
+                    <?= nt()->load_template('layouts/product-sidebar', '', ['cate' => '']) ?>
+                </div>
             </div>
-
-            <!--Bộ lọc-->
-            <?php get_sidebar('products'); ?>
-
         </div>
-    </section>
-
+    </div>
+</main>
 
 <?php
-do_shortcode('[ns_list_tags]');
 get_footer();
