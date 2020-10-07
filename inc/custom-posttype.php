@@ -16,6 +16,7 @@ class CustomPostType{
     {
         require_once THEME_URL.'/inc/custom-posttype/banners.php';
         require_once THEME_URL.'/inc/custom-posttype/locations.php';
+        require_once THEME_URL.'/inc/custom-posttype/recruitment.php';
     }
 }
 CustomPostType::_class_init();
